@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanha Dia das Mães ACISC 2025</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1, h2, h3, .title {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-background {
+      background: linear-gradient(135deg, #3ca55c 0%, #b5ac49 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    
+    .logo-container img {
+      max-width: 220px;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .footer {
+      margin-top: 2rem;
+      background-color: #f0f7f0;
+    }
+    
+    .countdown {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .countdown-title {
+      margin-bottom: 1rem;
+      color: #3ca55c;
+    }
+    
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .countdown-segment {
+      margin: 0.5rem 1rem;
+      text-align: center;
+    }
+    
+    .countdown-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #3ca55c;
+    }
+    
+    .countdown-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .rules-section {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .how-it-works {
+      background-color: #f0f7f0;
+      padding: 3rem 0;
+      position: relative;
+    }
+    
+    .how-it-works::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233ca55c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.2;
+      z-index: 0;
+    }
+    
+    .step-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .step-card .card-content {
+      flex-grow: 1;
+    }
+    
+    .step-number {
+      background-color: #3ca55c;
+      color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    .premio-semanal {
+      background-color: #f5f9f5;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      border-left: 5px solid #3ca55c;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    .empresa-card {
+      height: 100%;
+    }
+    
+    .empresa-logo {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .empresa-card:hover .empresa-logo {
+      background-color: #f5f5f5;
+      transform: scale(1.05);
+    }
+    
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .button.contact-btn {
+      background-color: #3ca55c;
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .button.contact-btn:hover {
+      background-color: #2e8045;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(60, 165, 92, 0.3);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #3ca55c;
+      border-radius: 3px;
+    }
+    
+    /* Melhorias para Mobile */
+    @media screen and (max-width: 768px) {
+      .columns {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      
+      .column {
+        padding: 0.5rem;
+      }
+      
+      .countdown-value {
+        font-size: 2rem;
+      }
+      
+      .title.is-1 {
+        font-size: 2rem !important;
+      }
+      
+      .title.is-2 {
+        font-size: 1.75rem !important;
+      }
+      
+      .hero-body {
+        padding: 3rem 1rem;
+      }
+      
+      .section {
+        padding: 2rem 1rem;
+      }
+      
+      .logo-container img {
+        max-width: 180px;
+      }
+      
+      .countdown-segment {
+        margin: 0.5rem;
+      }
+      
+      .card-content {
+        padding: 1rem;
+      }
+      
+      .rules-section {
+        padding: 1.5rem;
+      }
+      
+      .footer .columns {
+        text-align: center;
+      }
+      
+      .buttons.is-centered {
+        justify-content: center;
+      }
+      
+      .countdown-timer {
+        flex-wrap: wrap;
+      }
+      
+      .empresa-card {
+        margin-bottom: 1rem;
+      }
+    }
+    
+    /* Estilos para tablets */
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+      .column.is-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Fix para menu mobile */
+    .navbar-menu.is-active {
+      position: absolute;
+      width: 100%;
+      box-shadow: 0 8px 16px rgba(10,10,10,.1);
+      z-index: 30;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="acisic logo.jpg" alt="ACISC Logo" width="112" height="28">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#">Início</a>
+          <a class="navbar-item" href="#como-funciona">Como Funciona</a>
+          <a class="navbar-item" href="#empresas">Empresas Participantes</a>
+          <a class="navbar-item" href="#regras">Regras</a>
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary contact-btn">
+                <strong>Fale Conosco</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero is-medium hero-background" style="margin-top: 52px;">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="logo-container">
+          <img src="acisic logo.jpg" alt="ACISC Logo">
+        </div>
+        <h1 class="title is-1 has-text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+          Campanha Dia das Mães 2025
+        </h1>
+        <h2 class="subtitle has-text-white" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+          Clube de Descontos ACISC - Celebre com Ofertas Especiais!
+        </h2>
+        <div class="countdown">
+          <h3 class="countdown-title has-text-centered is-size-4">Próximo Sorteio em:</h3>
+          <div class="countdown-timer">
+            <div class="countdown-segment">
+              <div id="days" class="countdown-value">00</div>
+              <div class="countdown-label">Dias</div>
+            </div>
+            <div class="countdown-segment">
+              <div id="hours" class="countdown-value">00</div>
+              <div class="countdown-label">Horas</div>
+            </div>
+            <div class="countdown-segment">
+              <div id="minutes" class="countdown-value">00</div>
+              <div class="countdown-label">Minutos</div>
+            </div>
+            <div class="countdown-segment">
+              <div id="seconds" class="countdown-value">00</div>
+              <div class="countdown-label">Segundos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section id="como-funciona" class="section how-it-works">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered section-title mb-6">Como Funciona</h2>
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="card step-card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <div class="step-number">1</div>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Compre em uma loja participante</p>
+                </div>
+              </div>
+              <div class="content">
+                Faça suas compras em qualquer uma das lojas conveniadas da campanha Dia das Mães 2025.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card step-card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <div class="step-number">2</div>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Ganhe um cupom de desconto</p>
+                </div>
+              </div>
+              <div class="content">
+                Ao finalizar sua compra, você receberá um cupom exclusivo para usar em outra loja participante.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card step-card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <div class="step-number">3</div>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Concorra a prêmios semanais</p>
+                </div>
+              </div>
+              <div class="content">
+                Cada compra realizada gera um número da sorte para concorrer aos sorteios semanais de vale-compras.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="premio-semanal mt-6">
+        <h3 class="title is-4 has-text-centered">Sorteios Semanais</h3>
+        <p class="has-text-centered">Toda sexta-feira um novo ganhador! Fique atento ao nosso site e redes sociais para conferir os resultados.</p>
+        <div class="has-text-centered mt-4">
+          <a href="#regras" class="button is-success is-outlined">Ver detalhes dos prêmios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empresas Participantes -->
+  <section id="empresas" class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered section-title mb-6">Empresas Participantes</h2>
+      <div class="columns is-multiline" id="empresas-container">
+        <!-- Empresa 1 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-store fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Loja Elegance</p>
+              <p class="subtitle is-6">Moda Feminina</p>
+              <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123</p>
+              <p><i class="fas fa-phone"></i> (16) 3333-4444</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 2 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-gem fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Joalheria Diamante</p>
+              <p class="subtitle is-6">Joias e Acessórios</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. Central, 456</p>
+              <p><i class="fas fa-phone"></i> (16) 3555-6666</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 3 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-utensils fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Restaurante Sabor</p>
+              <p class="subtitle is-6">Gastronomia</p>
+              <p><i class="fas fa-map-marker-alt"></i> Praça Gourmet, 789</p>
+              <p><i class="fas fa-phone"></i> (16) 3777-8888</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 4 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-spa fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Spa Relax</p>
+              <p class="subtitle is-6">Beleza e Bem-estar</p>
+              <p><i class="fas fa-map-marker-alt"></i> Alameda Zen, 321</p>
+              <p><i class="fas fa-phone"></i> (16) 3999-0000</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 5 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-tshirt fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Boutique Fashion</p>
+              <p class="subtitle is-6">Moda e Acessórios</p>
+              <p><i class="fas fa-map-marker-alt"></i> Shopping Center, Loja 42</p>
+              <p><i class="fas fa-phone"></i> (16) 3222-1111</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 6 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-gift fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Presentes Especiais</p>
+              <p class="subtitle is-6">Loja de Presentes</p>
+              <p><i class="fas fa-map-marker-alt"></i> Galeria Central, 55</p>
+              <p><i class="fas fa-phone"></i> (16) 3444-5555</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 7 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-shoe-prints fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Calçados Conforto</p>
+              <p class="subtitle is-6">Sapatos e Bolsas</p>
+              <p><i class="fas fa-map-marker-alt"></i> Rua do Comércio, 234</p>
+              <p><i class="fas fa-phone"></i> (16) 3666-7777</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 8 -->
+        <div class="column is-3 empresa-item">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-cookie fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Doces Sonhos</p>
+              <p class="subtitle is-6">Confeitaria</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. dos Doces, 111</p>
+              <p><i class="fas fa-phone"></i> (16) 3888-9999</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 9 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-laptop fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Eletrônicos Tech</p>
+              <p class="subtitle is-6">Eletrônicos</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 500</p>
+              <p><i class="fas fa-phone"></i> (16) 3000-2222</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 10 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-glasses fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Ótica Visão</p>
+              <p class="subtitle is-6">Óculos e Lentes</p>
+              <p><i class="fas fa-map-marker-alt"></i> Rua das Lentes, 150</p>
+              <p><i class="fas fa-phone"></i> (16) 3444-1234</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 11 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-book fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Livraria Cultura</p>
+              <p class="subtitle is-6">Livros e Papelaria</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. dos Livros, 290</p>
+              <p><i class="fas fa-phone"></i> (16) 3555-7890</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 12 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-futbol fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Esporte Total</p>
+              <p class="subtitle is-6">Artigos Esportivos</p>
+              <p><i class="fas fa-map-marker-alt"></i> Rua do Esporte, 422</p>
+              <p><i class="fas fa-phone"></i> (16) 3777-4321</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 13 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-dog fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Pet Shop Amigo</p>
+              <p class="subtitle is-6">Produtos para Pets</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. dos Pets, 765</p>
+              <p><i class="fas fa-phone"></i> (16) 3222-8765</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 14 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-camera fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Foto Center</p>
+              <p class="subtitle is-6">Fotos e Revelações</p>
+              <p><i class="fas fa-map-marker-alt"></i> Galeria Centro, 210</p>
+              <p><i class="fas fa-phone"></i> (16) 3111-5678</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 15 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-bed fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Casa & Decoração</p>
+              <p class="subtitle is-6">Artigos para Casa</p>
+              <p><i class="fas fa-map-marker-alt"></i> Av. do Lar, 876</p>
+              <p><i class="fas fa-phone"></i> (16) 3666-4343</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Empresa 16 (Nova) -->
+        <div class="column is-3 empresa-item empresa-oculta">
+          <div class="card empresa-card">
+            <div class="card-content">
+              <div class="empresa-logo">
+                <span class="icon is-large">
+                  <i class="fas fa-guitar fa-2x"></i>
+                </span>
+              </div>
+              <p class="title is-5">Música & Cia</p>
+              <p class="subtitle is-6">Instrumentos Musicais</p>
+              <p><i class="fas fa-map-marker-alt"></i> Rua da Música, 321</p>
+              <p><i class="fas fa-phone"></i> (16) 3999-1212</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="has-text-centered mt-5">
+        <button id="ver-mais-empresas" class="button is-success is-medium">Ver todas as empresas participantes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regras -->
+  <section id="regras" class="section">
+    <div class="container">
+      <div class="rules-section">
+        <h2 class="title is-2 has-text-centered section-title mb-5">Regras da Promoção</h2>
+        <div class="content">
+          <ol>
+            <li>A promoção é válida para compras realizadas entre 15/04/2025 a 17/05/2025.</li>
+            <li>Para participar, basta fazer compras em qualquer loja conveniada.</li>
+            <li>Cada compra realizada dá direito a um cupom de desconto para uso em outra loja participante.</li>
+            <li>O cupom é válido por 15 dias após a data de emissão.</li>
+            <li>Cada compra também gera um número da sorte para concorrer aos vale-compras semanais.</li>
+            <li>Os sorteios acontecem toda sexta-feira, às 18h, na sede da ACISC.</li>
+            <li>Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e redes sociais da ACISC.</li>
+            <li>Os vale-compras têm valor de R$ 500,00 e podem ser utilizados em qualquer loja participante.</li>
+            <li>Os cupons de desconto não são cumulativos com outras promoções.</li>
+            <li>Em caso de dúvidas, entre em contato com a ACISC pelo telefone (16) 3000-0000.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section has-background-success-light">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Não perca esta oportunidade!</h2>
+      <p class="subtitle is-5 mb-5">Aproveite as promoções e concorra a prêmios incríveis.</p>
+      <div class="buttons is-centered">
+        <a href="#empresas" class="button is-success is-medium">Ver Empresas Participantes</a>
+        <a href="#regras" class="button is-light is-medium">Consultar Regras</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="mb-3">
+            <img src="acisic logo.jpg" alt="ACISC Logo" width="150">
+          </div>
+          <p>Associação Comercial e Empresarial de Siqueira Campos</p>
+          <p><i class="fas fa-map-marker-alt"></i> Rua nanana, 401 - Centro</p>
+          <p><i class="fas fa-phone"></i> (43) 3000-0000</p>
+          <p><i class="fas fa-envelope"></i> contato@acisc.com.br</p>
+        </div>
+        <div class="column is-4">
+          <h3 class="title is-5">Redes Sociais</h3>
+          <div class="buttons is-centered">
+            <button class="button is-link is-rounded">
+              <span class="icon">
+                <i class="fab fa-facebook-f"></i>
+              </span>
+            </button>
+            <button class="button is-info is-rounded">
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+            </button>
+            <button class="button is-danger is-rounded">
+              <span class="icon">
+                <i class="fab fa-instagram"></i>
+              </span>
+            </button>
+            <button class="button is-success is-rounded">
+              <span class="icon">
+                <i class="fab fa-whatsapp"></i>
+              </span>
+            </button>
+          </div>
+          <p class="mt-4">Siga-nos e fique por dentro de todas as novidades!</p>
+        </div>
+        <div class="column is-4">
+          <h3 class="title is-5">Contato</h3>
+          <p>Tem dúvidas sobre a promoção?</p>
+          <button class="button is-success contact-btn mt-3">Fale Conosco</button>
+          <p class="mt-3">Horário de atendimento:<br>Segunda a Sexta: 8h às 18h</p>
+        </div>
+      </div>
+      <p class="mt-5">
+        &copy; 2025 ACISC - Todos os direitos reservados
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    const countdownDate = new Date("May 7, 2025 18:00:00").getTime();
+    
+    const countdownTimer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+      
+      if (distance < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+    }, 1000);
+    
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+    
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if(targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if(targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Verifica se está no mobile e ajusta o layout
+      function checkMobile() {
+        const isMobile = window.innerWidth < 769;
+        if (isMobile) {
+          // Fecha menu ao clicar em item de navegação
+          document.querySelectorAll('.navbar-item').forEach(item => {
+            item.addEventListener('click', () => {
+              const burger = document.querySelector('.navbar-burger');
+              const menu = document.querySelector('.navbar-menu');
+              burger.classList.remove('is-active');
+              menu.classList.remove('is-active');
+            });
+          });
+        }
+      }
+      
+      // Chama a função inicialmente e sempre que redimensionar a tela
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      
+      // Funcionalidade do botão "Ver mais empresas"
+      const verMaisBtn = document.getElementById('ver-mais-empresas');
+      const empresasOcultas = document.querySelectorAll('.empresa-oculta');
+      
+      // Adiciona estilo para ocultar as empresas extras inicialmente
+      document.head.insertAdjacentHTML('beforeend', `
+        <style>
+          .empresa-oculta {
+            display: none;
+          }
+        </style>
+      `);
+      
+      verMaisBtn.addEventListener('click', function() {
+        // Mostra todas as empresas ocultas
+        empresasOcultas.forEach(empresa => {
+          empresa.classList.remove('empresa-oculta');
+          empresa.style.display = 'block';
+          
+          // Anima a entrada com fade
+          empresa.style.opacity = '0';
+          setTimeout(() => {
+            empresa.style.transition = 'opacity 0.5s ease';
+            empresa.style.opacity = '1';
+          }, 50);
+        });
+        
+        // Muda o texto do botão e desabilita
+        this.textContent = 'Todas as empresas exibidas';
+        this.disabled = true;
+        this.classList.remove('is-success');
+        this.classList.add('is-static');
+        
+        // Scroll suave para a próxima empresa após as 8 iniciais
+        if (empresasOcultas.length > 0) {
+          setTimeout(() => {
+            window.scrollTo({
+              top: empresasOcultas[0].offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }, 300);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
