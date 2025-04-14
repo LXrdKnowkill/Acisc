@@ -4,859 +4,1097 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campanha Dia das Mães ACISC 2025</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
+    :root {
+      --primary: #3ca55c;
+      --primary-light: #f0f7f0;
+      --primary-dark: #2e8045;
+      --secondary: #b5ac49;
+      --secondary-light: #f7faee;
+      --dark: #2d3748;
+      --light: #f7fafc;
+      --gray: #a0aec0;
     }
     
-    h1, h2, h3, .title {
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3, .font-display {
       font-family: 'Playfair Display', serif;
     }
     
-    .hero-background {
-      background: linear-gradient(135deg, #3ca55c 0%, #b5ac49 100%);
-      position: relative;
-      overflow: hidden;
-    }
+    .bg-primary { background-color: var(--primary); }
+    .bg-primary-light { background-color: var(--primary-light); }
+    .bg-primary-dark { background-color: var(--primary-dark); }
+    .bg-secondary { background-color: var(--secondary); }
+    .bg-secondary-light { background-color: var(--secondary-light); }
+    .text-primary { color: var(--primary); }
+    .text-primary-dark { color: var(--primary-dark); }
+    .text-secondary { color: var(--secondary); }
+    .border-primary { border-color: var(--primary); }
     
-    .hero-background::before {
-      content: '';
-      position: absolute;
+    /* Navbar */
+    .navbar-fixed {
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 0.3;
-    }
-    
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-    
-    .logo-container img {
-      max-width: 220px;
-      height: auto;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .footer {
-      margin-top: 2rem;
-      background-color: #f0f7f0;
-    }
-    
-    .countdown {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-    
-    .countdown-title {
-      margin-bottom: 1rem;
-      color: #3ca55c;
-    }
-    
-    .countdown-timer {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .countdown-segment {
-      margin: 0.5rem 1rem;
-      text-align: center;
-    }
-    
-    .countdown-value {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #3ca55c;
-    }
-    
-    .countdown-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .rules-section {
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .how-it-works {
-      background-color: #f0f7f0;
-      padding: 3rem 0;
-      position: relative;
-    }
-    
-    .how-it-works::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233ca55c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 0.2;
-      z-index: 0;
-    }
-    
-    .step-card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .step-card .card-content {
-      flex-grow: 1;
-    }
-    
-    .step-number {
-      background-color: #3ca55c;
-      color: white;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 10px;
-      font-weight: bold;
-    }
-    
-    .premio-semanal {
-      background-color: #f5f9f5;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-top: 1.5rem;
-      border-left: 5px solid #3ca55c;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    
-    .empresa-card {
-      height: 100%;
-    }
-    
-    .empresa-logo {
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      background-color: #f9f9f9;
-      border-radius: 8px;
+      z-index: 40;
       transition: all 0.3s ease;
     }
     
-    .empresa-card:hover .empresa-logo {
-      background-color: #f5f5f5;
+    .navbar-scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    /* Hero section */
+    .hero-pattern {
+      background-color: var(--primary-light);
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%233ca55c' fill-opacity='0.12' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    
+    /* Countdown */
+    .countdown-segment {
+      position: relative;
+    }
+    
+    .countdown-segment:not(:last-child)::after {
+      content: ':';
+      position: absolute;
+      right: -12px;
+      top: 0;
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    /* Card styles */
+    .card-empresa {
+      transition: all 0.3s ease;
+    }
+    
+    .card-empresa:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .logo-placeholder {
+      background-color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .logo-placeholder img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+    
+    .card-empresa:hover .logo-placeholder img {
       transform: scale(1.05);
     }
     
-    .navbar {
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .button.contact-btn {
-      background-color: #3ca55c;
-      color: white;
-      border: none;
-      transition: all 0.3s ease;
-    }
-    
-    .button.contact-btn:hover {
-      background-color: #2e8045;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(60, 165, 92, 0.3);
-    }
-    
-    .section-title {
+    /* Steps */
+    .step-card {
       position: relative;
-      display: inline-block;
-      margin-bottom: 2rem;
+      z-index: 10;
     }
     
-    .section-title::after {
-      content: '';
+    .step-number {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
       position: absolute;
-      bottom: -10px;
+      top: -20px;
+      left: 20px;
+      z-index: 20;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Rules section */
+    .numbered-list {
+      counter-reset: rule-counter;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .numbered-list li {
+      counter-increment: rule-counter;
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 2px dashed var(--primary-light);
+    }
+    
+    .numbered-list li:last-child {
+      border-left: 0;
+      padding-bottom: 0;
+    }
+    
+    .numbered-list li::before {
+      content: counter(rule-counter);
+      position: absolute;
+      left: -20px;
+      top: -5px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Animation for empresa reveal */
+    .empresa-hidden {
+      display: none;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+    
+    /* Flower decoration */
+    .flower-decoration {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%233ca55c' fill-opacity='0.2' d='M50 0 C60 30 70 40 100 50 C70 60 60 70 50 100 C40 70 30 60 0 50 C30 40 40 30 50 0'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 0;
+      opacity: 0.5;
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background-color: #3ca55c;
-      border-radius: 3px;
+      animation: bounce 2s infinite;
     }
     
-    /* Melhorias para Mobile */
-    @media screen and (max-width: 768px) {
-      .columns {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      
-      .column {
-        padding: 0.5rem;
-      }
-      
-      .countdown-value {
-        font-size: 2rem;
-      }
-      
-      .title.is-1 {
-        font-size: 2rem !important;
-      }
-      
-      .title.is-2 {
-        font-size: 1.75rem !important;
-      }
-      
-      .hero-body {
-        padding: 3rem 1rem;
-      }
-      
-      .section {
-        padding: 2rem 1rem;
-      }
-      
-      .logo-container img {
-        max-width: 180px;
-      }
-      
-      .countdown-segment {
-        margin: 0.5rem;
-      }
-      
-      .card-content {
-        padding: 1rem;
-      }
-      
-      .rules-section {
-        padding: 1.5rem;
-      }
-      
-      .footer .columns {
-        text-align: center;
-      }
-      
-      .buttons.is-centered {
-        justify-content: center;
-      }
-      
-      .countdown-timer {
-        flex-wrap: wrap;
-      }
-      
-      .empresa-card {
-        margin-bottom: 1rem;
-      }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+      40% {transform: translateY(-20px) translateX(-50%);}
+      60% {transform: translateY(-10px) translateX(-50%);}
     }
     
-    /* Estilos para tablets */
-    @media screen and (min-width: 769px) and (max-width: 1023px) {
-      .column.is-3 {
-        flex: 0 0 50%;
-        max-width: 50%;
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+      .countdown-segment:not(:last-child)::after {
+        right: -8px;
+        font-size: 1.5rem;
       }
-    }
-    
-    /* Fix para menu mobile */
-    .navbar-menu.is-active {
-      position: absolute;
-      width: 100%;
-      box-shadow: 0 8px 16px rgba(10,10,10,.1);
-      z-index: 30;
+      
+      .flower-decoration {
+        width: 60px;
+        height: 60px;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="acisic logo.jpg" alt="ACISC Logo" width="112" height="28">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="#">Início</a>
-          <a class="navbar-item" href="#como-funciona">Como Funciona</a>
-          <a class="navbar-item" href="#empresas">Empresas Participantes</a>
-          <a class="navbar-item" href="#regras">Regras</a>
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary contact-btn">
-                <strong>Fale Conosco</strong>
-              </a>
-            </div>
+  <nav id="navbar" class="navbar-fixed py-3 px-4 bg-white bg-opacity-95 shadow-md">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <a href="#" class="flex items-center">
+          <img src="acisic logo.jpg" alt="ACISC Logo" class="h-10">
+          <div class="ml-3 hidden md:block">
+            <span class="text-primary-dark font-semibold text-lg">ACISC</span>
+            <p class="text-xs text-gray-600">Associação Comercial de Siqueira Campos</p>
           </div>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-primary transition duration-300">Início</a>
+          <a href="#como-funciona" class="text-gray-700 hover:text-primary transition duration-300">Como Funciona</a>
+          <a href="#empresas" class="text-gray-700 hover:text-primary transition duration-300">Empresas</a>
+          <a href="#regras" class="text-gray-700 hover:text-primary transition duration-300">Regras</a>
+          <a href="#contato" class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md">Fale Conosco</a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white rounded-lg shadow-lg py-4 absolute left-0 right-0 z-20">
+        <div class="flex flex-col space-y-3 px-4">
+          <a href="#" class="text-gray-700 hover:text-primary py-2 transition duration-300">Início</a>
+          <a href="#como-funciona" class="text-gray-700 hover:text-primary py-2 transition duration-300">Como Funciona</a>
+          <a href="#empresas" class="text-gray-700 hover:text-primary py-2 transition duration-300">Empresas</a>
+          <a href="#regras" class="text-gray-700 hover:text-primary py-2 transition duration-300">Regras</a>
+          <a href="#contato" class="bg-primary text-white px-4 py-2 rounded-lg text-center mt-2">Fale Conosco</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero is-medium hero-background" style="margin-top: 52px;">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="logo-container">
-          <img src="acisic logo.jpg" alt="ACISC Logo">
+  <section class="hero-pattern relative min-h-screen flex items-center pt-16" id="hero">
+    <div class="flower-decoration top-20 right-20"></div>
+    <div class="flower-decoration bottom-20 left-20"></div>
+    
+    <div class="container mx-auto px-4 py-20">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="w-full lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
+          <div class="bg-white bg-opacity-90 p-6 rounded-xl shadow-xl mb-8 transform rotate-1 w-48 mx-auto lg:mx-0">
+            <img src="acisic logo.jpg" alt="ACISC Logo" class="w-full h-auto">
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-dark leading-tight mb-4">
+            Campanha Dia das Mães 2025
+          </h1>
+          <h2 class="text-xl md:text-2xl text-gray-700 mb-8 font-light">
+            Clube de Descontos ACISC - Celebre com ofertas incríveis e prêmios especiais
+          </h2>
+          <div class="flex flex-wrap gap-4">
+            <a href="#empresas" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center">
+              Ver Empresas
+            </a>
+            <a href="#como-funciona" class="bg-white hover:bg-gray-100 text-primary border border-primary px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center">
+              Como Participar
+            </a>
+          </div>
         </div>
-        <h1 class="title is-1 has-text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
-          Campanha Dia das Mães 2025
-        </h1>
-        <h2 class="subtitle has-text-white" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
-          Clube de Descontos ACISC - Celebre com Ofertas Especiais!
-        </h2>
-        <div class="countdown">
-          <h3 class="countdown-title has-text-centered is-size-4">Próximo Sorteio em:</h3>
-          <div class="countdown-timer">
-            <div class="countdown-segment">
-              <div id="days" class="countdown-value">00</div>
-              <div class="countdown-label">Dias</div>
+        
+        <div class="w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-primary mb-6">Próximo Sorteio em:</h3>
+              <div class="flex justify-center items-center space-x-8">
+                <div class="countdown-segment text-center">
+                  <div id="days" class="text-4xl md:text-5xl font-bold text-primary">00</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Dias</div>
+                </div>
+                <div class="countdown-segment text-center">
+                  <div id="hours" class="text-4xl md:text-5xl font-bold text-primary">00</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Horas</div>
+                </div>
+                <div class="countdown-segment text-center">
+                  <div id="minutes" class="text-4xl md:text-5xl font-bold text-primary">00</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Minutos</div>
+                </div>
+                <div class="countdown-segment text-center">
+                  <div id="seconds" class="text-4xl md:text-5xl font-bold text-primary">00</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Segundos</div>
+                </div>
+              </div>
+              
+              <div class="mt-8 p-5 bg-primary-light rounded-lg">
+                <div class="flex items-center text-left">
+                  <div class="bg-primary rounded-full p-2 mr-3">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-primary-dark">Período da Promoção</h4>
+                    <p class="text-sm text-gray-600">14/04/2025 a 16/05/2025</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="countdown-segment">
-              <div id="hours" class="countdown-value">00</div>
-              <div class="countdown-label">Horas</div>
-            </div>
-            <div class="countdown-segment">
-              <div id="minutes" class="countdown-value">00</div>
-              <div class="countdown-label">Minutos</div>
-            </div>
-            <div class="countdown-segment">
-              <div id="seconds" class="countdown-value">00</div>
-              <div class="countdown-label">Segundos</div>
+            
+            <div class="bg-gradient-to-r from-primary to-secondary p-6">
+              <div class="flex justify-between items-center">
+                <div class="text-white">
+                  <p class="font-bold">Sorteio Semanal</p>
+                  <p class="text-sm opacity-80">Toda sexta-feira às 18h</p>
+                </div>
+                <a href="#regras" class="bg-white text-primary hover:bg-gray-100 font-medium px-4 py-2 rounded-lg transition duration-300">Ver Regras</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
+    <div class="scroll-indicator">
+      <svg class="w-10 h-10 text-primary animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
   </section>
 
   <!-- Como Funciona -->
-  <section id="como-funciona" class="section how-it-works">
-    <div class="container">
-      <h2 class="title is-2 has-text-centered section-title mb-6">Como Funciona</h2>
-      <div class="columns is-multiline">
-        <div class="column is-4">
-          <div class="card step-card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <div class="step-number">1</div>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">Compre em uma loja participante</p>
-                </div>
-              </div>
-              <div class="content">
-                Faça suas compras em qualquer uma das lojas conveniadas da campanha Dia das Mães 2025.
-              </div>
+  <section id="como-funciona" class="py-20 bg-gray-50 relative overflow-hidden">
+    <div class="flower-decoration top-10 right-10"></div>
+    <div class="flower-decoration bottom-10 left-10"></div>
+    
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 font-display">Como Funciona</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Participe da nossa campanha do Dia das Mães e concorra a prêmios incríveis enquanto aproveita descontos exclusivos!</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Passo 1 -->
+        <div class="step-card bg-white rounded-xl shadow-lg p-6 pt-12 relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">1</div>
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-4">
+              <svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
             </div>
+            <h3 class="text-xl font-bold text-primary-dark mb-2">Compre em uma loja participante</h3>
+            <p class="text-gray-600">Faça suas compras em qualquer uma das lojas conveniadas da campanha Dia das Mães 2025.</p>
           </div>
         </div>
-        <div class="column is-4">
-          <div class="card step-card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <div class="step-number">2</div>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">Ganhe um cupom de desconto</p>
-                </div>
-              </div>
-              <div class="content">
-                Ao finalizar sua compra, você receberá um cupom exclusivo para usar em outra loja participante.
-              </div>
+        
+        <!-- Passo 2 -->
+        <div class="step-card bg-white rounded-xl shadow-lg p-6 pt-12 relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">2</div>
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-4">
+              <svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
+              </svg>
             </div>
+            <h3 class="text-xl font-bold text-primary-dark mb-2">Ganhe um cupom de desconto</h3>
+            <p class="text-gray-600">Ao finalizar sua compra, você receberá um cupom exclusivo para usar em outra loja participante.</p>
           </div>
         </div>
-        <div class="column is-4">
-          <div class="card step-card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <div class="step-number">3</div>
-                </div>
-                <div class="media-content">
-                  <p class="title is-4">Concorra a prêmios semanais</p>
-                </div>
-              </div>
-              <div class="content">
-                Cada compra realizada gera um número da sorte para concorrer aos sorteios semanais de vale-compras.
-              </div>
+        
+        <!-- Passo 3 -->
+        <div class="step-card bg-white rounded-xl shadow-lg p-6 pt-12 relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">3</div>
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 mx-auto mb-4">
+              <svg class="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+              </svg>
             </div>
+            <h3 class="text-xl font-bold text-primary-dark mb-2">Concorra a prêmios semanais</h3>
+            <p class="text-gray-600">Cada compra realizada gera um número da sorte para concorrer aos sorteios semanais de vale-compras.</p>
           </div>
         </div>
       </div>
       
-      <div class="premio-semanal mt-6">
-        <h3 class="title is-4 has-text-centered">Sorteios Semanais</h3>
-        <p class="has-text-centered">Toda sexta-feira um novo ganhador! Fique atento ao nosso site e redes sociais para conferir os resultados.</p>
-        <div class="has-text-centered mt-4">
-          <a href="#regras" class="button is-success is-outlined">Ver detalhes dos prêmios</a>
+      <div class="mt-16 bg-white rounded-xl shadow-lg p-8 border-l-4 border-primary max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-2xl font-bold text-primary-dark mb-4 font-display text-center">Sorteios Semanais</h3>
+        <p class="text-gray-600 mb-6 text-center">Toda semana um novo ganhador! Fique atento ao nosso site e redes sociais para conferir os resultados.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-primary-light rounded-lg p-4 text-center">
+            <div class="text-primary text-xl font-bold mb-2">1º Sorteio</div>
+            
+
+          </div>
+          <div class="bg-primary-light rounded-lg p-4 text-center">
+            <div class="text-primary text-xl font-bold mb-2">2º Sorteio</div>
+            
+          </div>
+          <div class="bg-primary-light rounded-lg p-4 text-center">
+            <div class="text-primary text-xl font-bold mb-2">3º Sorteio</div>
+          
+
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Empresas Participantes -->
-  <section id="empresas" class="section">
-    <div class="container">
-      <h2 class="title is-2 has-text-centered section-title mb-6">Empresas Participantes</h2>
-      <div class="columns is-multiline" id="empresas-container">
-        <!-- Empresa 1 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-store fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Loja Elegance</p>
-              <p class="subtitle is-6">Moda Feminina</p>
-              <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123</p>
-              <p><i class="fas fa-phone"></i> (16) 3333-4444</p>
+  <section id="empresas" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 font-display">Empresas Participantes</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Confira as empresas que fazem parte da nossa campanha e aproveite ofertas especiais em todas elas.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="empresa-container">
+        <!-- Empresa 1 - Dismasiq -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/dismasiq.png" alt="Dismasiq Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Dismasiq</h3>
+            <p class="text-sm text-gray-500 mb-3">Materiais de Construção</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Um jeito fácil de construir!</p>
             </div>
           </div>
         </div>
         
-        <!-- Empresa 2 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-gem fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Joalheria Diamante</p>
-              <p class="subtitle is-6">Joias e Acessórios</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. Central, 456</p>
-              <p><i class="fas fa-phone"></i> (16) 3555-6666</p>
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+              <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/Joao.jpeg" alt="João de Barro Logo" class="max-h-32">
             </div>
+            <div class="p-5">
+              <h3 class="font-bold text-lg text-primary-dark mb-1">João de Barro Cerâmica</h3>
+              <p class="text-sm text-gray-500 mb-3">Cerâmica e Tijolos</p>
+              <div class="flex items-center">
+                <i class="fas fa-tag text-primary text-sm mr-2"></i>
+                <p class="text-sm text-gray-600">Qualidade do barro à sua obra!</p>
+              </div>
+            </div>
+          </div>
+
+        <!-- Empresa 2 - Casa e Casa -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/marca_casa_e_casa_sem_fundo_sem_lojas2.png" alt="Casa e Casa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Casa e Casa</h3>
+            <p class="text-sm text-gray-500 mb-3">Móveis e Decoração</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Sua casa, seu estilo</p>
+            </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 3 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-utensils fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Restaurante Sabor</p>
-              <p class="subtitle is-6">Gastronomia</p>
-              <p><i class="fas fa-map-marker-alt"></i> Praça Gourmet, 789</p>
-              <p><i class="fas fa-phone"></i> (16) 3777-8888</p>
+        <!-- Empresa 3 - La Pelle -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/la pelle.jpg" alt="La Pelle Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">La Pelle</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda feminina e masculina</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Qualidade que você veste</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 4 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-spa fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Spa Relax</p>
-              <p class="subtitle is-6">Beleza e Bem-estar</p>
-              <p><i class="fas fa-map-marker-alt"></i> Alameda Zen, 321</p>
-              <p><i class="fas fa-phone"></i> (16) 3999-0000</p>
+        <!-- Empresa 4 - Sicoob -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="250">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/logo-517644992-1612871691-ca812a497827e76d2eac3bc97a6254e21612871692.png" alt="Sicoob Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Úbida Auto Shopping</h3>
+            <p class="text-sm text-gray-500 mb-3">Loja de Veículos e Trocas</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Seu próximo carro está aqui!</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 5 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-tshirt fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Boutique Fashion</p>
-              <p class="subtitle is-6">Moda e Acessórios</p>
-              <p><i class="fas fa-map-marker-alt"></i> Shopping Center, Loja 42</p>
-              <p><i class="fas fa-phone"></i> (16) 3222-1111</p>
+        <!-- Empresa 5 - LF Moda -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/lf logo branca 3.png" alt="LF Moda Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">LF Store</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda e Acessórios</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Estilo para todos os momentos</p>
             </div>
+           
           </div>
         </div>
         
-        <!-- Empresa 6 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-gift fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Presentes Especiais</p>
-              <p class="subtitle is-6">Loja de Presentes</p>
-              <p><i class="fas fa-map-marker-alt"></i> Galeria Central, 55</p>
-              <p><i class="fas fa-phone"></i> (16) 3444-5555</p>
+        <!-- Empresa 6 - Natural Shop -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="350">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/IMG_2732-removebg-preview.png" alt="Natural Shop Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Sil Calçados</h3>
+            <p class="text-sm text-gray-500 mb-3">Loja de Calçados</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Conforto em cada passo</p>
             </div>
+           
           </div>
         </div>
         
         <!-- Empresa 7 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-shoe-prints fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Calçados Conforto</p>
-              <p class="subtitle is-6">Sapatos e Bolsas</p>
-              <p><i class="fas fa-map-marker-alt"></i> Rua do Comércio, 234</p>
-              <p><i class="fas fa-phone"></i> (16) 3666-7777</p>
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.46.16 (3).jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Doce Lar Móveis</h3>
+            <p class="text-sm text-gray-500 mb-3">Móveis e Decoração</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Seu lar mais aconchegante</p>
             </div>
+            
+          </div>
+        </div>
+        <!-- Empresa 9 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.55.00.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Pioneiro</h3>
+            <p class="text-sm text-gray-500 mb-3">Restaurante e Posto</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Sabor e abastecimento no mesmo lugar</p>
+            </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 8 -->
-        <div class="column is-3 empresa-item">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-cookie fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Doces Sonhos</p>
-              <p class="subtitle is-6">Confeitaria</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. dos Doces, 111</p>
-              <p><i class="fas fa-phone"></i> (16) 3888-9999</p>
+        <!-- Empresa 10 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.19.18.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Casa Rocha</h3>
+            <p class="text-sm text-gray-500 mb-3">Tintas e Presentes</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Cores que transformam</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 9 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-laptop fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Eletrônicos Tech</p>
-              <p class="subtitle is-6">Eletrônicos</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. Tecnologia, 500</p>
-              <p><i class="fas fa-phone"></i> (16) 3000-2222</p>
+        <!-- Empresa 11 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.10.24.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Loja Bertoni</h3>
+            <p class="text-sm text-gray-500 mb-3">Confecção Unissex</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Estilo com tradição</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 10 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-glasses fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Ótica Visão</p>
-              <p class="subtitle is-6">Óculos e Lentes</p>
-              <p><i class="fas fa-map-marker-alt"></i> Rua das Lentes, 150</p>
-              <p><i class="fas fa-phone"></i> (16) 3444-1234</p>
+        <!-- Empresa 12 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 18.02.15.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Eliana Cosméticos</h3>
+            <p class="text-sm text-gray-500 mb-3">Beleza e Cuidados</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Realce sua beleza</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 11 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-book fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Livraria Cultura</p>
-              <p class="subtitle is-6">Livros e Papelaria</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. dos Livros, 290</p>
-              <p><i class="fas fa-phone"></i> (16) 3555-7890</p>
+        <!-- Empresa 13 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.39.11.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">GoldStore</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda e SkateShop</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Atitude do seu jeito</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 12 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-futbol fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Esporte Total</p>
-              <p class="subtitle is-6">Artigos Esportivos</p>
-              <p><i class="fas fa-map-marker-alt"></i> Rua do Esporte, 422</p>
-              <p><i class="fas fa-phone"></i> (16) 3777-4321</p>
+        <!-- Empresa 14 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.51.58.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">LiloKids</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda Infantil e Juvenil</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Moda para os pequenos grandes estilos</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 13 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-dog fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Pet Shop Amigo</p>
-              <p class="subtitle is-6">Produtos para Pets</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. dos Pets, 765</p>
-              <p><i class="fas fa-phone"></i> (16) 3222-8765</p>
+        <!-- Empresa 15 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-12-02 at 09.49.35.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Mercado Modelo</h3>
+            <p class="text-sm text-gray-500 mb-3">Supermercado</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Completo para sua família</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 14 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-camera fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Foto Center</p>
-              <p class="subtitle is-6">Fotos e Revelações</p>
-              <p><i class="fas fa-map-marker-alt"></i> Galeria Centro, 210</p>
-              <p><i class="fas fa-phone"></i> (16) 3111-5678</p>
+        <!-- Empresa 16 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-03-25 at 17.38.06.jpg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Prefeitura de Siqueira Campos</h3>
+            <p class="text-sm text-gray-500 mb-3">Prefeitura</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Valorizando nossa história</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 15 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-bed fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Casa & Decoração</p>
-              <p class="subtitle is-6">Artigos para Casa</p>
-              <p><i class="fas fa-map-marker-alt"></i> Av. do Lar, 876</p>
-              <p><i class="fas fa-phone"></i> (16) 3666-4343</p>
+        <!-- Empresa 17 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.54.27.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Sempre Bela</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda e Acessórios</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Charme em cada detalhe</p>
             </div>
+            
           </div>
         </div>
         
-        <!-- Empresa 16 (Nova) -->
-        <div class="column is-3 empresa-item empresa-oculta">
-          <div class="card empresa-card">
-            <div class="card-content">
-              <div class="empresa-logo">
-                <span class="icon is-large">
-                  <i class="fas fa-guitar fa-2x"></i>
-                </span>
-              </div>
-              <p class="title is-5">Música & Cia</p>
-              <p class="subtitle is-6">Instrumentos Musicais</p>
-              <p><i class="fas fa-map-marker-alt"></i> Rua da Música, 321</p>
-              <p><i class="fas fa-phone"></i> (16) 3999-1212</p>
+        <!-- Empresa 18 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.11.00.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Pague Menos Calçados</h3>
+            <p class="text-sm text-gray-500 mb-3">Calçados em geral</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Preço bom e qualidade</p>
             </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 19 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-04-29 at 12.40.07.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Samir Presentes</h3>
+            <p class="text-sm text-gray-500 mb-3">Presentes e Utilidades</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Para todos os momentos especiais</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 20 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.42.18.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Cheiro de Carinho</h3>
+            <p class="text-sm text-gray-500 mb-3">Cosméticos e Cuidados</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Beleza com afeto</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 21 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.41.55.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Bella Bijouteria Makeup</h3>
+            <p class="text-sm text-gray-500 mb-3">Bijuterias e Maquiagem</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Seu brilho, sua essência</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 22 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.48.30.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Acácia Farmarcia de Manipulação</h3>
+            <p class="text-sm text-gray-500 mb-3">Drogaria de Manipulação</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Saúde com precisão</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 23 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.45.27 (1).jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">L.A Modas</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda Unissex</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Tendência e estilo no dia a dia</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 24 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 12.12.11.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Amor Perfeito</h3>
+            <p class="text-sm text-gray-500 mb-3">Floricultura</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Flores para emocionar</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 25 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.07.15.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">O Boticário</h3>
+            <p class="text-sm text-gray-500 mb-3">Perfumaria e Cosméticos</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Encantos para todos os sentidos</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 26 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-03-25 at 17.36.11.jpg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Departamento de Cultura</h3>
+            <p class="text-sm text-gray-500 mb-3">Siqueira Campos</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Valorizando nossa história</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 27 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.43.01.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Juli Presentes</h3>
+            <p class="text-sm text-gray-500 mb-3">Presentes e Utilidade</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Para surpreender sempre</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Empresa 28 -->
+        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
+          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-04-10 at 10.50.40.jpeg" alt="Empresa Logo" class="max-h-32">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-primary-dark mb-1">Lady P Modas</h3>
+            <p class="text-sm text-gray-500 mb-3">Moda Feminina</p>
+            <div class="flex items-center">
+              <i class="fas fa-tag text-primary text-sm mr-2"></i>
+              <p class="text-sm text-gray-600">Elegância e atitude</p>
+            </div>
+            
           </div>
         </div>
       </div>
       
-      <div class="has-text-centered mt-5">
-        <button id="ver-mais-empresas" class="button is-success is-medium">Ver todas as empresas participantes</button>
+      <div class="text-center mt-12">
+        <button id="ver-mais-btn" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-flex items-center">
+          <span>Ver todas as empresas</span>
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Regras -->
-  <section id="regras" class="section">
-    <div class="container">
-      <div class="rules-section">
-        <h2 class="title is-2 has-text-centered section-title mb-5">Regras da Promoção</h2>
-        <div class="content">
-          <ol>
-            <li>A promoção é válida para compras realizadas entre 14/04/2025 a 16/05/2025.</li>
-            <li>Para participar, basta fazer compras em qualquer loja conveniada do Clube de Descontos</li>
-            <li>Cada compra realizada dá direito a um cupom de desconto para uso em outra loja participante.</li>
-            <li>Os sorteios acontecem toda sexta-feira, às 18h, na sede da ACISC.</li>
-            <li>Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e redes sociais da ACISC.</li>
-            <li>Os cupons de desconto não são cumulativos com outras promoções.</li>
-            <li>Em caso de dúvidas, entre em contato com a ACISC pelo telefone (43)99950-0181.</li>
-          </ol>
+  <!-- Regras da Promoção -->
+  <section id="regras" class="py-20 bg-primary-light relative overflow-hidden">
+    <div class="flower-decoration top-20 left-10 opacity-25"></div>
+    <div class="flower-decoration bottom-20 right-10 opacity-25"></div>
+    
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 font-display">Regras da Promoção</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Confira o regulamento completo da nossa campanha.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto relative z-10" data-aos="fade-up" data-aos-delay="200">
+        <ul class="numbered-list">
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Período da Promoção</p>
+            <p class="text-gray-600">A promoção é válida para compras realizadas entre 14/04/2025 a 16/05/2025.</p>
+          </li>
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Participação</p>
+            <p class="text-gray-600">Para participar, basta fazer compras em qualquer loja conveniada do Clube de Descontos.</p>
+          </li>
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Cupons de Desconto</p>
+            <p class="text-gray-600">Cada compra realizada dá direito a um cupom de desconto para uso em outra loja participante.</p>
+          </li>
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Sorteios</p>
+            <p class="text-gray-600">Os sorteios acontecem toda semana, às 18h, na sede da ACISC.</p>
+          </li>
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Divulgação dos Resultados</p>
+            <p class="text-gray-600">Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e redes sociais da ACISC.</p>
+          </li>
+          <li class="pl-8">
+            <p class="text-lg font-semibold text-primary-dark mb-2">Restrições</p>
+            <p class="text-gray-600">Os cupons de desconto não são cumulativos com outras promoções.</p>
+          </li>
+        </ul>
+        
+        <div class="mt-12 p-6 bg-primary-light rounded-xl flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0 md:mr-6">
+            <h3 class="text-xl font-bold text-primary-dark mb-2">Dúvidas</h3>
+            <p class="text-gray-600">Em caso de dúvidas, entre em contato com a ACISC pelo telefone (43) 99950-0181.</p>
+          </div>
+          <a href="#contato" class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition duration-300 inline-block text-center whitespace-nowrap">
+            Entre em Contato
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Call to Action -->
-  <section class="section has-background-success-light">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">Não perca esta oportunidade!</h2>
-      <p class="subtitle is-5 mb-5">Aproveite as promoções e concorra a prêmios incríveis.</p>
-      <div class="buttons is-centered">
-        <a href="#empresas" class="button is-success is-medium">Ver Empresas Participantes</a>
-        <a href="#regras" class="button is-light is-medium">Consultar Regras</a>
+  <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6 font-display" data-aos="fade-up">Não perca esta oportunidade!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">Aproveite as promoções e concorra a prêmios incríveis para presentear sua mãe neste dia especial.</p>
+      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="#empresas" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center font-medium">
+          Ver Empresas Participantes
+        </a>
+        <a href="#regras" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center font-medium">
+          Consultar Regras
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <div class="columns is-multiline">
-        <div class="column is-4">
-          <div class="mb-3">
-            <img src="acisic logo.jpg" alt="ACISC Logo" width="150">
+  <footer id="contato" class="bg-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+        <div data-aos="fade-up">
+          <div class="mb-6">
+            <img src="acisic logo.jpg" alt="ACISC Logo" class="h-16">
           </div>
-          <p>Associação Comercial e Empresarial de Siqueira Campos</p>
-          <p><i class="fas fa-map-marker-alt"></i> Rua Marechal Deodoro, 1711 - Centro</p>
-          <p><i class="fas fa-phone"></i> (43) 99950-0181</p>
-          <p><i class="fas fa-envelope"></i> acisc_secretaria@hotmail.com</p>
-        </div>
-        <div class="column is-4">
-          <h3 class="title is-5">Redes Sociais</h3>
-          <div class="buttons is-centered">
-            <button class="button is-link is-rounded">
-              <span class="icon">
-                <i class="fab fa-facebook-f"></i>
-              </span>
-            </button>
-            <button class="button is-danger is-rounded">
-              <span class="icon">
-                <i class="fab fa-instagram"></i>
-              </span>
-            </button>
-            <button class="button is-success is-rounded">
-              <span class="icon">
-                <i class="fab fa-whatsapp"></i>
-              </span>
-            </button>
+          <p class="text-gray-600 mb-4">Associação Comercial e Empresarial de Siqueira Campos</p>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-primary mr-3 w-5 text-center"></i>
+              <p class="text-gray-600">Rua Marechal Deodoro, 1711 - Centro</p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone text-primary mr-3 w-5 text-center"></i>
+              <p class="text-gray-600">(43) 99950-0181</p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-primary mr-3 w-5 text-center"></i>
+              <p class="text-gray-600">acisc_secretaria@hotmail.com</p>
+            </div>
           </div>
-          <p class="mt-4">Siga-nos e fique por dentro de todas as novidades!</p>
         </div>
-        <div class="column is-4">
-          <h3 class="title is-5">Contato</h3>
-          <p>Tem dúvidas sobre a promoção?</p>
-          <button class="button is-success contact-btn mt-3">Fale Conosco</button>
-          <p class="mt-3">Horário de atendimento:<br>Segunda a Sexta: 9h às 18h<br>Sábados|HomeOffice: 9h às 12h</p>
-          <!--<p class="mt-3">Sábados|HomeOffice: 9h às 12h</p>-->
+        
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold text-primary-dark mb-6">Redes Sociais</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-green-500 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+          <p class="text-gray-600">Siga-nos e fique por dentro de todas as novidades!</p>
+          <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+            <p class="text-sm text-gray-500">
+              <i class="fas fa-clock text-primary mr-2"></i>
+              Horário de atendimento:
+            </p>
+            <p class="text-sm text-gray-500 ml-6">Segunda a Sexta: 9h às 18h</p>
+            <p class="text-sm text-gray-500 ml-6">Sábados (HomeOffice): 9h às 12h</p>
+          </div>
+        </div>
+        
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold text-primary-dark mb-6">Contato</h3>
+          <p class="text-gray-600 mb-6">Tem dúvidas sobre a promoção? Entre em contato conosco!</p>
+          <form class="space-y-4">
+            <div>
+              <input type="text" placeholder="Nome" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition">
+            </div>
+            <div>
+              <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition">
+            </div>
+            <div>
+              <textarea placeholder="Mensagem" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition" rows="3"></textarea>
+            </div>
+            <button type="submit" class="bg-primary hover:bg-primary-dark text-white w-full py-2 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md">
+              Enviar Mensagem
+            </button>
+          </form>
         </div>
       </div>
-      <p class="mt-5">
-        &copy; 2025 ACISC - Todos os direitos reservados
-      </p>
+      
+      <div class="border-t border-gray-200 pt-8 mt-8 text-center">
+        <p class="text-gray-500 text-sm">
+          &copy; 2025 ACISC - Associação Comercial e Empresarial de Siqueira Campos | Todos os direitos reservados
+        </p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button id="scrollToTop" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 opacity-0 invisible transition-all duration-300">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"></path>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Countdown Timer
-    const countdownDate = new Date("May 17, 2025 17:00:00").getTime();
-    
-    const countdownTimer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-      
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-      document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-      
-      if (distance < 0) {
-        clearInterval(countdownTimer);
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
-      }
-    }, 1000);
-    
-    // Mobile Menu Toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-      // Add a click event on each of them
-      $navbarBurgers.forEach( el => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-    
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
+    // Inicialização AOS (Animate on Scroll)
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        once: true,
+        mirror: false
       });
       
-      // Smooth scrolling for anchor links
+      // Navbar Toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+      
+      // Scroll suave para links de âncora
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           e.preventDefault();
           
           const targetId = this.getAttribute('href');
-          if(targetId === '#') return;
+          if (targetId === '#') return;
           
           const targetElement = document.querySelector(targetId);
-          if(targetElement) {
+          if (targetElement) {
             window.scrollTo({
               top: targetElement.offsetTop - 70,
               behavior: 'smooth'
@@ -865,68 +1103,83 @@
         });
       });
       
-      // Verifica se está no mobile e ajusta o layout
-      function checkMobile() {
-        const isMobile = window.innerWidth < 769;
-        if (isMobile) {
-          // Fecha menu ao clicar em item de navegação
-          document.querySelectorAll('.navbar-item').forEach(item => {
-            item.addEventListener('click', () => {
-              const burger = document.querySelector('.navbar-burger');
-              const menu = document.querySelector('.navbar-menu');
-              burger.classList.remove('is-active');
-              menu.classList.remove('is-active');
-            });
-          });
+      // Countdown Timer
+      const countdownDate = new Date("May 17, 2025 17:00:00").getTime();
+      
+      const countdownTimer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+        document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        
+        if (distance < 0) {
+          clearInterval(countdownTimer);
+          document.getElementById("days").innerHTML = "00";
+          document.getElementById("hours").innerHTML = "00";
+          document.getElementById("minutes").innerHTML = "00";
+          document.getElementById("seconds").innerHTML = "00";
         }
+      }, 1000);
+      
+      // Botão Ver mais empresas
+      const verMaisBtn = document.getElementById('ver-mais-btn');
+      const empresasOcultas = document.querySelectorAll('.empresa-hidden');
+      
+      if (verMaisBtn && empresasOcultas.length > 0) {
+        verMaisBtn.addEventListener('click', function() {
+          let delay = 0;
+          
+          empresasOcultas.forEach(empresa => {
+            setTimeout(() => {
+              empresa.classList.remove('empresa-hidden');
+              empresa.classList.add('fade-in-up');
+            }, delay);
+            delay += 100;
+          });
+          
+          // Atualiza o botão
+          this.innerHTML = '<span>Todas as empresas exibidas</span>';
+          this.disabled = true;
+          this.classList.add('opacity-75', 'cursor-not-allowed');
+          this.classList.remove('hover:bg-primary-dark', 'hover:-translate-y-1');
+        });
       }
       
-      // Chama a função inicialmente e sempre que redimensionar a tela
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
+      // Efeito de navbar ao scroll
+      const navbar = document.getElementById('navbar');
+      const scrollToTopBtn = document.getElementById('scrollToTop');
       
-      // Funcionalidade do botão "Ver mais empresas"
-      const verMaisBtn = document.getElementById('ver-mais-empresas');
-      const empresasOcultas = document.querySelectorAll('.empresa-oculta');
-      
-      // Adiciona estilo para ocultar as empresas extras inicialmente
-      document.head.insertAdjacentHTML('beforeend', `
-        <style>
-          .empresa-oculta {
-            display: none;
-          }
-        </style>
-      `);
-      
-      verMaisBtn.addEventListener('click', function() {
-        // Mostra todas as empresas ocultas
-        empresasOcultas.forEach(empresa => {
-          empresa.classList.remove('empresa-oculta');
-          empresa.style.display = 'block';
-          
-          // Anima a entrada com fade
-          empresa.style.opacity = '0';
-          setTimeout(() => {
-            empresa.style.transition = 'opacity 0.5s ease';
-            empresa.style.opacity = '1';
-          }, 50);
-        });
-        
-        // Muda o texto do botão e desabilita
-        this.textContent = 'Todas as empresas exibidas';
-        this.disabled = true;
-        this.classList.remove('is-success');
-        this.classList.add('is-static');
-        
-        // Scroll suave para a próxima empresa após as 8 iniciais
-        if (empresasOcultas.length > 0) {
-          setTimeout(() => {
-            window.scrollTo({
-              top: empresasOcultas[0].offsetTop - 100,
-              behavior: 'smooth'
-            });
-          }, 300);
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('shadow-md');
+        } else {
+          navbar.classList.remove('shadow-md');
         }
+        
+        // Mostrar/ocultar botão de scroll to top
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+          scrollToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+          scrollToTopBtn.classList.add('opacity-0', 'invisible');
+          scrollToTopBtn.classList.remove('opacity-100', 'visible');
+        }
+      });
+      
+      // Scroll to top
+      scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
     });
   </script>
