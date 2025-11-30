@@ -4,1474 +4,1782 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Natal Premiado ACISC 2025</title>
+  <meta name="description" content="Natal Premiado ACISC 2025 - Compre nas lojas participantes de Siqueira Campos e concorra a prêmios incríveis!">
+  <title>Natal Premiado ACISC 2025 | Siqueira Campos</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  
   <style>
-    :root {
-      --primary: #4CAF50;
-      --primary-light: #E8F5E9;
-      --primary-dark: #2E7D32;
-      --secondary: #FDD835;
-      --secondary-light: #FFFDE7;
-      --accent: #FFB300;
-      --dark: #1B5E20;
-      --light: #F1F8E9;
-      --gray: #9E9E9E;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--dark);
+    :root {
+      --green-900: #14532d;
+      --green-800: #166534;
+      --green-700: #15803d;
+      --green-600: #16a34a;
+      --green-500: #22c55e;
+      --green-100: #dcfce7;
+      --green-50: #f0fdf4;
+      
+      --gold-600: #ca8a04;
+      --gold-500: #eab308;
+      --gold-400: #facc15;
+      --gold-300: #fde047;
+      --gold-100: #fef9c3;
+      --gold-50: #fefce8;
+      
+      --red-700: #b91c1c;
+      --red-600: #dc2626;
+      --red-100: #fee2e2;
+      
+      --gray-900: #111827;
+      --gray-800: #1f2937;
+      --gray-700: #374151;
+      --gray-600: #4b5563;
+      --gray-500: #6b7280;
+      --gray-400: #9ca3af;
+      --gray-300: #d1d5db;
+      --gray-200: #e5e7eb;
+      --gray-100: #f3f4f6;
+      --gray-50: #f9fafb;
+      
+      --white: #ffffff;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
-    h1,
-    h2,
-    h3,
-    .font-display {
-      font-family: 'Playfair Display', serif;
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--gray-800);
+      line-height: 1.6;
+      background: var(--white);
+      overflow-x: hidden;
     }
 
-    .bg-primary {
-      background-color: var(--primary);
+    h1, h2, h3, h4, .font-display {
+      font-family: 'DM Serif Display', Georgia, serif;
+      line-height: 1.2;
     }
 
-    .bg-primary-light {
-      background-color: var(--primary-light);
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
-    .bg-primary-dark {
-      background-color: var(--primary-dark);
-    }
-
-    .bg-secondary {
-      background-color: var(--secondary);
-    }
-
-    .bg-secondary-light {
-      background-color: var(--secondary-light);
-    }
-
-    .text-primary {
-      color: var(--primary);
-    }
-
-    .text-primary-dark {
-      color: var(--primary-dark);
-    }
-
-    .text-secondary {
-      color: var(--secondary);
-    }
-
-    .border-primary {
-      border-color: var(--primary);
-    }
-
-    /* Navbar */
-    .navbar-fixed {
+    /* ==================== NAVBAR ==================== */
+    .navbar {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 40;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
       transition: all 0.3s ease;
     }
 
-    .navbar-scrolled {
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    .navbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
     }
 
-    /* Hero section */
-    .hero-pattern {
-      background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
-      background-image:
-        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234CAF50' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L55 25 L70 25 L58 35 L63 50 L50 40 L37 50 L42 35 L30 25 L45 25 Z' fill='%23FDD835' fill-opacity='0.1'/%3E%3C/svg%3E");
-      background-position: 0 0, 50px 50px;
-    }
-
-    /* Countdown */
-    .countdown-segment {
-      position: relative;
-    }
-
-    .countdown-segment:not(:last-child)::after {
-      content: ':';
-      position: absolute;
-      right: -12px;
-      top: 0;
-      font-size: 2rem;
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    /* Card styles */
-    .card-empresa {
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 2px solid transparent;
-    }
-
-    .card-empresa:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px -12px rgba(76, 175, 80, 0.25);
-      border-color: var(--secondary);
-    }
-
-    .logo-placeholder {
-      background: linear-gradient(135deg, #f9fafb 0%, var(--primary-light) 100%);
+    .navbar-brand {
       display: flex;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
+      gap: 0.75rem;
+      text-decoration: none;
     }
 
-    .logo-placeholder::before {
-      content: '🎄';
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      font-size: 1.2rem;
-      opacity: 0.3;
+    .navbar-brand img {
+      height: 44px;
+      width: auto;
     }
 
-    .logo-placeholder img {
-      max-width: 85%;
-      max-height: 85%;
-      object-fit: contain;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      filter: brightness(1);
-    }
-
-    .card-empresa:hover .logo-placeholder img {
-      transform: scale(1.1) rotate(2deg);
-      filter: brightness(1.1);
-    }
-
-    /* Steps */
-    .step-card {
-      position: relative;
-      z-index: 10;
-    }
-
-    .step-number {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: white;
-      font-weight: bold;
-      position: absolute;
-      top: -25px;
-      left: 20px;
-      z-index: 20;
-      box-shadow: 0 8px 16px -4px rgba(76, 175, 80, 0.4);
-      border: 3px solid var(--secondary);
-    }
-
-    /* Rules section */
-    .numbered-list {
-      counter-reset: rule-counter;
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .numbered-list li {
-      counter-increment: rule-counter;
-      position: relative;
-      padding-left: 3rem;
-      padding-bottom: 1.5rem;
-      margin-bottom: 1rem;
-      border-left: 2px dashed var(--primary-light);
-    }
-
-    .numbered-list li:last-child {
-      border-left: 0;
-      padding-bottom: 0;
-    }
-
-    .numbered-list li::before {
-      content: counter(rule-counter);
-      position: absolute;
-      left: -20px;
-      top: -5px;
-      width: 45px;
-      height: 45px;
-      background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-      color: var(--dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      box-shadow: 0 6px 12px -2px rgba(253, 216, 53, 0.4);
-      border: 2px solid var(--primary);
-    }
-
-    /* Animation for empresa reveal */
-    .empresa-hidden {
+    .navbar-brand-text {
       display: none;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
+    @media (min-width: 768px) {
+      .navbar-brand-text {
+        display: block;
       }
-
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+      .navbar-brand-text strong {
+        display: block;
+        color: var(--green-800);
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      .navbar-brand-text span {
+        font-size: 0.75rem;
+        color: var(--gray-500);
       }
     }
 
-    .fade-in-up {
-      animation: fadeInUp 0.5s ease forwards;
+    .navbar-nav {
+      display: none;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
     }
 
-    /* Christmas decoration */
-    .christmas-decoration {
+    @media (min-width: 1024px) {
+      .navbar-nav {
+        display: flex;
+      }
+    }
+
+    .navbar-nav a {
+      text-decoration: none;
+      color: var(--gray-600);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .navbar-nav a:hover {
+      color: var(--green-700);
+    }
+
+    .navbar-nav a::after {
+      content: '';
       position: absolute;
-      width: 120px;
-      height: 120px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%234CAF50' fill-opacity='0.15' d='M50 10 L60 35 L85 35 L65 50 L75 75 L50 60 L25 75 L35 50 L15 35 L40 35 Z'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23FDD835' fill-opacity='0.3'/%3E%3C/svg%3E");
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 0;
-      opacity: 0.6;
-      animation: float 6s ease-in-out infinite;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green-600);
+      transition: width 0.2s;
     }
 
-    @keyframes float {
+    .navbar-nav a:hover::after {
+      width: 100%;
+    }
 
-      0%,
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
 
-      50% {
-        transform: translateY(-20px) rotate(5deg);
+    .btn-primary {
+      background: var(--green-700);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-800);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      background: var(--gold-400);
+      color: var(--green-900);
+    }
+
+    .btn-secondary:hover {
+      background: var(--gold-500);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--green-700);
+      border: 2px solid var(--green-700);
+    }
+
+    .btn-outline:hover {
+      background: var(--green-700);
+      color: var(--white);
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--green-800);
+    }
+
+    .btn-white:hover {
+      background: var(--gray-100);
+      transform: translateY(-1px);
+    }
+
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--gray-700);
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-toggle {
+        display: none;
       }
     }
 
-    /* Scroll indicator */
-    .scroll-indicator {
+    .mobile-menu {
+      display: none;
       position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: bounce 2s infinite;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-lg);
+      padding: 1rem;
     }
 
-    @keyframes bounce {
-
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
-        transform: translateY(0) translateX(-50%);
-      }
-
-      40% {
-        transform: translateY(-20px) translateX(-50%);
-      }
-
-      60% {
-        transform: translateY(-10px) translateX(-50%);
-      }
+    .mobile-menu.active {
+      display: block;
     }
 
-    /* Snowflakes animation */
-    @keyframes snowfall {
-      0% {
-        transform: translateY(-10vh) translateX(0);
-        opacity: 0;
-      }
-
-      10% {
-        opacity: 1;
-      }
-
-      90% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(100vh) translateX(100px);
-        opacity: 0;
-      }
+    .mobile-menu a {
+      display: block;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--gray-700);
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.2s;
     }
 
-    .snowflake {
-      position: fixed;
-      top: -10px;
-      z-index: 9999;
-      user-select: none;
-      cursor: default;
-      animation: snowfall linear infinite;
-      color: var(--secondary);
-      opacity: 0.7;
-      font-size: 1.5rem;
+    .mobile-menu a:hover {
+      background: var(--gray-100);
+      color: var(--green-700);
     }
 
-    /* Gradient text effect */
-    .gradient-text {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    /* ==================== HERO ==================== */
+    .hero {
+      padding: 8rem 0 5rem;
+      background: linear-gradient(135deg, var(--green-50) 0%, var(--gold-50) 50%, var(--green-50) 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
     }
 
-    /* Shine effect on cards */
-    .card-empresa::before {
+    .hero::before {
       content: '';
       position: absolute;
       top: 0;
-      left: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(234, 179, 8, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content {
+        text-align: left;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--green-200);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--green-700);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-badge i {
+      color: var(--gold-500);
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--green-900);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--red-600);
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-subtitle {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+    }
+
+    .hero-card-header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--green-50), var(--white));
+    }
+
+    .hero-card-header img {
+      max-width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: contain;
+    }
+
+    .countdown-section {
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    .countdown-label {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .countdown-item {
+      text-align: center;
+    }
+
+    .countdown-value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: var(--green-700);
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .countdown-unit {
+      font-size: 0.7rem;
+      color: var(--gray-500);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .countdown-separator {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green-700);
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+
+    .hero-card-footer {
+      padding: 1.25rem 2rem;
+      background: var(--green-800);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .hero-card-footer-text {
+      color: var(--white);
+    }
+
+    .hero-card-footer-text strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .hero-card-footer-text span {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* ==================== SECTIONS ==================== */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-alt {
+      background: var(--gray-50);
+    }
+
+    .section-green {
+      background: var(--green-800);
+      color: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      color: var(--green-900);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-green .section-title {
+      color: var(--white);
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-600), var(--gold-500));
+      border-radius: 2px;
+      margin: 0 auto 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-green .section-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ==================== HOW IT WORKS ==================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-200);
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-300);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--green-600), var(--green-700));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--green-100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto 1.5rem;
+    }
+
+    .step-icon i {
+      font-size: 1.5rem;
+      color: var(--green-700);
+    }
+
+    .step-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    /* ==================== EMPRESAS ==================== */
+    .empresas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .empresas-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .empresas-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .empresa-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .empresa-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-400);
+    }
+
+    .empresa-card.hidden {
+      display: none;
+    }
+
+    .empresa-logo {
+      height: 120px;
+      background: var(--gray-50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .empresa-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .empresa-info {
+      padding: 1rem;
+    }
+
+    .empresa-info h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .empresa-info p {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    .ver-mais-container {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    /* ==================== GANHADORES ==================== */
+    .ganhadores-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .ganhadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .ganhador-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .ganhador-card:hover {
+      border-color: var(--gold-400);
+      box-shadow: var(--shadow-md);
+    }
+
+    .ganhador-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .ganhador-icon i {
+      font-size: 1.25rem;
+      color: var(--green-900);
+    }
+
+    .ganhador-info h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .ganhador-premio {
+      font-size: 0.9rem;
+      color: var(--green-700);
+      font-weight: 600;
+    }
+
+    .ganhador-loja {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+    }
+
+    .ganhador-data {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      margin-top: 0.25rem;
+    }
+
+    /* ==================== REGRAS ==================== */
+    .regras-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .regras-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+    }
+
+    .regras-list {
+      padding: 2rem;
+    }
+
+    .regra-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .regra-item:last-child {
+      border-bottom: none;
+    }
+
+    .regra-number {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--green-900);
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+
+    .regra-content h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .regra-content p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+    }
+
+    .regras-footer {
+      padding: 1.5rem 2rem;
+      background: var(--green-50);
+      border-top: 1px solid var(--green-100);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      .regras-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .regras-footer-text h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--green-800);
+      margin-bottom: 0.25rem;
+    }
+
+    .regras-footer-text p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+
+    /* ==================== CTA ==================== */
+    .cta-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, var(--green-700), var(--green-800));
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .cta-text {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .footer {
+      background: var(--gray-900);
+      color: var(--gray-300);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1.5fr;
+      }
+    }
+
+    .footer-brand img {
+      height: 48px;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      color: var(--gray-400);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact-item i {
+      color: var(--green-500);
+      width: 16px;
+      margin-top: 2px;
+    }
+
+    .footer h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: all 0.2s;
+    }
+
+    .footer-social a.facebook {
+      background: #1877f2;
+    }
+
+    .footer-social a.instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .footer-social a.whatsapp {
+      background: #25d366;
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .footer-hours {
+      background: var(--gray-800);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .footer-hours p {
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-form input,
+    .footer-form textarea {
       width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      transition: left 0.5s;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-700);
+      background: var(--gray-800);
+      border-radius: 8px;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      transition: border-color 0.2s;
     }
 
-    .card-empresa:hover::before {
-      left: 100%;
+    .footer-form input::placeholder,
+    .footer-form textarea::placeholder {
+      color: var(--gray-500);
     }
 
-    /* Mobile optimization */
-    @media (max-width: 768px) {
-      .countdown-segment:not(:last-child)::after {
-        right: -8px;
-        font-size: 1.5rem;
-      }
+    .footer-form input:focus,
+    .footer-form textarea:focus {
+      outline: none;
+      border-color: var(--green-500);
+    }
 
-      .christmas-decoration {
-        width: 60px;
-        height: 60px;
-      }
+    .footer-form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
 
-      .snowflake {
-        font-size: 1rem;
+    .footer-form button {
+      width: 100%;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--gray-800);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* ==================== SCROLL TO TOP ==================== */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      background: var(--green-700);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--green-800);
+      transform: translateY(-2px);
+    }
+
+    /* ==================== ANIMATIONS ==================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav id="navbar" class="navbar-fixed py-3 px-4 bg-white bg-opacity-95 shadow-md">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-center">
-        <a href="#" class="flex items-center">
-          <img src="acisic logo.jpg" alt="ACISC Logo" class="h-10">
-          <div class="ml-3 hidden md:block">
-            <span class="text-primary-dark font-semibold text-lg">ACISC</span>
-            <p class="text-xs text-gray-600">Associação Comercial de Siqueira Campos</p>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#" class="navbar-brand">
+          <img src="acisic logo.jpg" alt="ACISC Logo">
+          <div class="navbar-brand-text">
+            <strong>ACISC</strong>
+            <span>Associação Comercial de Siqueira Campos</span>
           </div>
         </a>
 
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-gray-700 hover:text-primary transition duration-300">Início</a>
-          <a href="#como-funciona" class="text-gray-700 hover:text-primary transition duration-300">Como Funciona</a>
-          <a href="#empresas" class="text-gray-700 hover:text-primary transition duration-300">Empresas</a>
-          <a href="#ganhadores" class="text-gray-700 hover:text-primary transition duration-300">Ganhadores</a>
-          <a href="#regras" class="text-gray-700 hover:text-primary transition duration-300">Regras</a>
-          <a href="#contato"
-            class="bg-gradient-to-r from-primary to-primary-dark hover:from-secondary hover:to-accent text-white px-6 py-2.5 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-md font-medium flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-            </svg>
-            Fale Conosco
-          </a>
-        </div>
+        <ul class="navbar-nav">
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#empresas">Lojas Participantes</a></li>
+          <li><a href="#ganhadores">Ganhadores</a></li>
+          <li><a href="#regras">Regulamento</a></li>
+          <li><a href="#contato" class="btn btn-primary">Fale Conosco</a></li>
+        </ul>
 
-        <!-- Mobile menu button -->
-        <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+          <i class="fas fa-bars fa-lg"></i>
         </button>
       </div>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu"
-        class="md:hidden hidden mt-4 bg-white rounded-lg shadow-lg py-4 absolute left-0 right-0 z-20">
-        <div class="flex flex-col space-y-3 px-4">
-          <a href="#" class="text-gray-700 hover:text-primary py-2 transition duration-300">Início</a>
-          <a href="#como-funciona" class="text-gray-700 hover:text-primary py-2 transition duration-300">Como
-            Funciona</a>
-          <a href="#empresas" class="text-gray-700 hover:text-primary py-2 transition duration-300">Empresas</a>
-          <a href="#ganhadores" class="text-gray-700 hover:text-primary py-2 transition duration-300">Ganhadores</a>
-          <a href="#regras" class="text-gray-700 hover:text-primary py-2 transition duration-300">Regras</a>
-          <a href="#contato" class="bg-primary text-white px-4 py-2 rounded-lg text-center mt-2">Fale Conosco</a>
-        </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#empresas">Lojas Participantes</a>
+        <a href="#ganhadores">Ganhadores</a>
+        <a href="#regras">Regulamento</a>
+        <a href="#contato">Fale Conosco</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-pattern relative min-h-screen flex items-center pt-16" id="hero">
-    <div class="christmas-decoration top-20 right-20"></div>
-    <div class="christmas-decoration bottom-20 left-20" style="animation-delay: 2s;"></div>
-
-    <div class="container mx-auto px-4 py-20">
-      <div class="flex flex-col lg:flex-row items-center">
-        <div class="w-full lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
-          <div class="bg-white bg-opacity-90 p-6 rounded-xl shadow-xl mb-8 mx-auto lg:mx-0"
-            style="width: 520px; max-width: 100%;">
-            <img src="todas.png" alt="Acisc Logo" class="w-full h-auto">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-star"></i>
+            Promoção Especial de Natal
           </div>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-dark leading-tight mb-4 flex items-center gap-4 flex-wrap">
-            <svg class="w-12 h-12 md:w-16 md:h-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z"/>
-            </svg>
-            Natal Premiado ACISC 2025
-            <svg class="w-12 h-12 md:w-16 md:h-16 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM8.5 4C9.327 4 10 4.673 10 5.5S9.327 7 8.5 7 7 6.327 7 5.5 7.673 4 8.5 4zm7 0c.827 0 1.5.673 1.5 1.5S16.327 7 15.5 7 14 6.327 14 5.5s.673-1.5 1.5-1.5zM4 9h7v2H4V9zm0 11v-7h7v7H4zm9 0v-7h7v7h-7zm7-9h-7V9h7v2z"/>
-            </svg>
+          <h1 class="hero-title">
+            <span>Natal</span> Premiado<br>ACISC 2025
           </h1>
-          <h2 class="text-xl md:text-2xl text-gray-700 mb-8 font-light">
-            Lojas Participantes - Compre, concorra e celebre o Natal com prêmios incríveis!
-          </h2>
-          <div class="flex flex-wrap gap-4">
-            <a href="#empresas"
-              class="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl shadow-lg inline-flex items-center gap-3 text-center font-semibold">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
-              </svg>
+          <p class="hero-subtitle">
+            Compre nas lojas participantes de Siqueira Campos, ganhe cupons e concorra a prêmios incríveis neste Natal!
+          </p>
+          <div class="hero-buttons">
+            <a href="#empresas" class="btn btn-primary btn-lg">
+              <i class="fas fa-store"></i>
               Ver Lojas Participantes
             </a>
-            <a href="#como-funciona"
-              class="bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary text-dark border-2 border-primary px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl shadow-lg inline-flex items-center gap-3 text-center font-semibold">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM8.5 4C9.327 4 10 4.673 10 5.5S9.327 7 8.5 7 7 6.327 7 5.5 7.673 4 8.5 4zm7 0c.827 0 1.5.673 1.5 1.5S16.327 7 15.5 7 14 6.327 14 5.5s.673-1.5 1.5-1.5zM4 9h7v2H4V9zm0 11v-7h7v7H4zm9 0v-7h7v7h-7zm7-9h-7V9h7v2z"/>
-              </svg>
+            <a href="#como-funciona" class="btn btn-outline btn-lg">
+              <i class="fas fa-info-circle"></i>
               Como Participar
             </a>
           </div>
         </div>
 
-        <div class="w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold text-primary mb-6">Próximo Sorteio em:</h3>
-              <div class="flex justify-center items-center space-x-8">
-                <div class="countdown-segment text-center">
-                  <div id="days" class="text-4xl md:text-5xl font-bold text-primary">00</div>
-                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Dias</div>
-                </div>
-                <div class="countdown-segment text-center">
-                  <div id="hours" class="text-4xl md:text-5xl font-bold text-primary">00</div>
-                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Horas</div>
-                </div>
-                <div class="countdown-segment text-center">
-                  <div id="minutes" class="text-4xl md:text-5xl font-bold text-primary">00</div>
-                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Minutos</div>
-                </div>
-                <div class="countdown-segment text-center">
-                  <div id="seconds" class="text-4xl md:text-5xl font-bold text-primary">00</div>
-                  <div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Segundos</div>
-                </div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <img src="todas.png" alt="Natal Premiado ACISC 2025">
+          </div>
+          <div class="countdown-section">
+            <p class="countdown-label">Próximo sorteio em:</p>
+            <div class="countdown">
+              <div class="countdown-item">
+                <div class="countdown-value" id="days">00</div>
+                <div class="countdown-unit">Dias</div>
               </div>
-
-              <div
-                class="mt-8 p-5 bg-gradient-to-r from-primary-light to-secondary-light rounded-xl border-2 border-secondary">
-                <div class="flex items-center text-left">
-                  <div class="bg-gradient-to-br from-primary to-primary-dark rounded-full p-3 mr-3 shadow-lg">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <svg class="w-6 h-6 text-primary-dark" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>
-                    </svg>
-                    <div>
-                      <h4 class="font-bold text-primary-dark text-lg">Período da Promoção</h4>
-                      <p class="text-sm text-gray-700 font-medium">Dezembro 2025 - Natal Premiado</p>
-                    </div>
-                  </div>
-                </div>
+              <span class="countdown-separator">:</span>
+              <div class="countdown-item">
+                <div class="countdown-value" id="hours">00</div>
+                <div class="countdown-unit">Horas</div>
               </div>
-            </div>
-
-            <div class="bg-gradient-to-r from-primary via-primary-dark to-secondary p-6 relative overflow-hidden">
-              <svg class="absolute top-0 right-0 w-24 h-24 opacity-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z"/>
-              </svg>
-              <div class="flex justify-between items-center relative z-10">
-                <div class="text-white flex items-center gap-3">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2z"/>
-                  </svg>
-                  <div>
-                    <p class="font-bold text-lg">Sorteios Especiais</p>
-                    <p class="text-sm opacity-90">Concorra a prêmios incríveis!</p>
-                  </div>
-                </div>
-                <a href="#regras"
-                  class="bg-white text-primary hover:bg-secondary hover:text-dark font-bold px-5 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Ver Regras
-                </a>
+              <span class="countdown-separator">:</span>
+              <div class="countdown-item">
+                <div class="countdown-value" id="minutes">00</div>
+                <div class="countdown-unit">Min</div>
+              </div>
+              <span class="countdown-separator">:</span>
+              <div class="countdown-item">
+                <div class="countdown-value" id="seconds">00</div>
+                <div class="countdown-unit">Seg</div>
               </div>
             </div>
           </div>
+          <div class="hero-card-footer">
+            <div class="hero-card-footer-text">
+              <strong>Dezembro 2025</strong>
+              <span>Sorteios toda sexta-feira</span>
+            </div>
+            <a href="#regras" class="btn btn-secondary">Ver Regras</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <svg class="w-10 h-10 text-primary animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
     </div>
   </section>
 
   <!-- Como Funciona -->
-  <section id="como-funciona" class="py-20 bg-gray-50 relative overflow-hidden">
-    <div class="christmas-decoration top-10 right-10" style="animation-delay: 1s;"></div>
-    <div class="christmas-decoration bottom-10 left-10" style="animation-delay: 3s;"></div>
-
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <div class="flex items-center justify-center gap-4 mb-4">
-          <svg class="w-10 h-10 md:w-12 md:h-12 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2z"/>
-          </svg>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark font-display">Ganhadores Anteriores</h2>
-          <svg class="w-10 h-10 md:w-12 md:h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z"/>
-          </svg>
-        </div>
-        <div class="w-32 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto mb-6 rounded-full"></div>
-        <p class="text-gray-700 max-w-2xl mx-auto font-medium">Confira os sortudos que já ganharam prêmios incríveis em
-          nossas campanhas anteriores!</p>
+  <section class="section section-alt" id="como-funciona">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">Como Funciona</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Participar é simples! Veja como garantir seus cupons para os sorteios.</p>
       </div>
 
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Sorteio 25/04 -->
-        <div
-          class="bg-gradient-to-br from-white to-primary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-secondary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-gradient-to-br from-primary to-primary-dark rounded-full p-4 mr-4 shadow-md flex-shrink-0">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2z"/>
-            </svg>
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <i class="fas fa-shopping-bag"></i>
           </div>
-          <div>
-            <div class="flex items-center gap-2 mb-1">
-              <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <h3 class="font-bold text-lg text-primary-dark">Sandra Oliveira</h3>
-            </div>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$300,00</p>
-            <p class="text-sm font-medium text-primary">Mercado Modelo</p>
-            <div class="flex items-center gap-1 mt-1">
-              <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
-              </svg>
-              <p class="text-xs text-gray-500">Sorteio: 25/04/2025</p>
-            </div>
-          </div>
+          <h3>Compre nas Lojas Participantes</h3>
+          <p>Faça suas compras de Natal em qualquer uma das lojas conveniadas do programa.</p>
         </div>
 
-        <div
-          class="bg-gradient-to-br from-white to-secondary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-primary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-secondary to-accent rounded-full p-4 mr-4 shadow-md flex-shrink-0">
-            <svg class="w-8 h-8 text-dark" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 7h-1.209A4.92 4.92 0 0019 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.5 3.036C11.205 3.482 10.122 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2z"/>
-            </svg>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <i class="fas fa-ticket-alt"></i>
           </div>
-          <div>
-            <div class="flex items-center gap-2 mb-1">
-              <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-              <h3 class="font-bold text-lg text-primary-dark">Marta Prado</h3>
-            </div>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$50,00</p>
-            <p class="text-sm font-medium text-primary">Lillo Kids</p>
-            <div class="flex items-center gap-1 mt-1">
-              <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
-              </svg>
-              <p class="text-xs text-gray-500">Sorteio: 25/04/2025</p>
-            </div>
-          </div>
+          <h3>Receba seus Cupons</h3>
+          <p>A cada compra você recebe cupons para concorrer nos sorteios semanais.</p>
         </div>
 
-        <!-- Sorteio 02/05 -->
-        <div
-          class="bg-gradient-to-br from-white to-secondary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-primary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-secondary to-accent rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-dark text-2xl"></i>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <i class="fas fa-gift"></i>
           </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Zilda</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$50,00</p>
-            <p class="text-sm font-medium text-primary">Eliana Cosméticos</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 02/05/2025</p>
-          </div>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-white to-primary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-secondary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-primary to-primary-dark rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-white text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Larissa Vitória</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$300,00</p>
-            <p class="text-sm font-medium text-primary">Mercado Modelo</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 02/05/2025</p>
-          </div>
-        </div>
-
-        <!-- Sorteio 09/05 -->
-        <div
-          class="bg-gradient-to-br from-white to-secondary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-primary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-secondary to-accent rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-dark text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Maria José</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$50,00</p>
-            <p class="text-sm font-medium text-primary">Lillo Kids</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-white to-primary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-secondary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="300">
-          <div class="bg-gradient-to-br from-primary to-primary-dark rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-white text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Nazeli Alves</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium text-primary">Sempre Bela</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-white to-secondary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-primary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="300">
-          <div class="bg-gradient-to-br from-secondary to-accent rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-dark text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Marinês Chominski</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium text-primary">La Pelle</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-white to-primary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-secondary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-primary to-primary-dark rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-white text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Lucia Xavier</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium text-primary">Mafer Modas</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 16/05/2025</p>
-          </div>
-        </div>
-
-        <div
-          class="bg-gradient-to-br from-white to-secondary-light rounded-xl shadow-lg p-6 flex items-center border-2 border-transparent hover:border-primary transition-all duration-300 hover:shadow-2xl"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-gradient-to-br from-secondary to-accent rounded-full p-4 mr-4 shadow-md">
-            <i class="fas fa-gift text-dark text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">🎉 Rosilei Freitas</h3>
-            <p class="text-gray-700 font-semibold">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium text-primary">Juli Presentes</p>
-            <p class="text-xs text-gray-500 mt-1">📅 Sorteio: 16/05/2025</p>
-          </div>
+          <h3>Concorra a Prêmios</h3>
+          <p>Sorteios toda sexta-feira às 18h na sede da ACISC. Boa sorte!</p>
         </div>
       </div>
+    </div>
   </section>
 
-  <!-- Empresas Participantes -->
-  <section id="empresas" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <div class="flex items-center justify-center gap-4 mb-4">
-          <svg class="w-10 h-10 md:w-12 md:h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
-          </svg>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark font-display">Lojas Participantes do Natal Premiado</h2>
-          <svg class="w-10 h-10 md:w-12 md:h-12 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L10 8H4L9 12L7 18L12 14L17 18L15 12L20 8H14L12 2Z"/>
-          </svg>
-        </div>
-        <div class="w-24 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto">Confira todas as lojas participantes do Natal Premiado ACISC 2025 e
-          aproveite ofertas especiais neste Natal!</p>
+  <!-- Lojas Participantes -->
+  <section class="section" id="empresas">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">Lojas Participantes</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Confira todas as lojas onde você pode participar do Natal Premiado.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="empresa-container">
-        <!-- Empresa 1 - Dismasiq -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/dismasiq.png" alt="Dismasiq Logo" class="max-h-32">
+      <div class="empresas-grid" id="empresas-grid">
+        <!-- Linha 1 -->
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/dismasiq.png" alt="Dismasiq">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Dismasiq</h3>
-            <p class="text-sm text-gray-500 mb-3">Materiais de Construção</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Um jeito fácil de construir!</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Dismasiq</h3>
+            <p>Materiais de Construção</p>
           </div>
         </div>
 
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/Joao.jpeg" alt="João de Barro Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/Joao.jpeg" alt="João de Barro">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">João de Barro Cerâmica</h3>
-            <p class="text-sm text-gray-500 mb-3">Cerâmica e Tijolos</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Qualidade do barro à sua obra!</p>
-            </div>
+          <div class="empresa-info">
+            <h3>João de Barro Cerâmica</h3>
+            <p>Cerâmica e Tijolos</p>
           </div>
         </div>
 
-        <!-- Empresa 2 - Casa e Casa -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="150">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/marca_casa_e_casa_sem_fundo_sem_lojas2.png"
-              alt="Casa e Casa Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/marca_casa_e_casa_sem_fundo_sem_lojas2.png" alt="Casa e Casa">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Casa e Casa</h3>
-            <p class="text-sm text-gray-500 mb-3">Móveis e Decoração</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Sua casa, seu estilo</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Casa e Casa</h3>
+            <p>Móveis e Decoração</p>
           </div>
         </div>
 
-        <!-- Empresa 3 - La Pelle -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/la pelle.jpg" alt="La Pelle Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/la pelle.jpg" alt="La Pelle">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">La Pelle</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda feminina e masculina</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Qualidade que você veste</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>La Pelle</h3>
+            <p>Moda Feminina e Masculina</p>
           </div>
         </div>
 
-        <!-- Empresa 4 - Sicoob -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="250">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img
-              src="CLUB DE DESCONTO DIA DAS MÃES 2025/logo-517644992-1612871691-ca812a497827e76d2eac3bc97a6254e21612871692.png"
-              alt="Sicoob Logo" class="max-h-32">
+        <!-- Linha 2 -->
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/logo-517644992-1612871691-ca812a497827e76d2eac3bc97a6254e21612871692.png" alt="Úbida Auto Shopping">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Úbida Auto Shopping</h3>
-            <p class="text-sm text-gray-500 mb-3">Loja de Veículos e Trocas</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Seu próximo carro está aqui!</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Úbida Auto Shopping</h3>
+            <p>Veículos e Trocas</p>
           </div>
         </div>
 
-        <!-- Empresa 5 - LF Moda -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/lf logo branca 3.png" alt="LF Moda Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/lf logo branca 3.png" alt="LF Store">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">LF Store</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda e Acessórios</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Estilo para todos os momentos</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>LF Store</h3>
+            <p>Moda e Acessórios</p>
           </div>
         </div>
 
-        <!-- Empresa 6 - Natural Shop -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="350">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/IMG_2732-removebg-preview.png" alt="Natural Shop Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/IMG_2732-removebg-preview.png" alt="Sil Calçados">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Sil Calçados</h3>
-            <p class="text-sm text-gray-500 mb-3">Loja de Calçados</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Conforto em cada passo</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Sil Calçados</h3>
+            <p>Loja de Calçados</p>
           </div>
         </div>
 
-        <!-- Empresa 7 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.46.16 (3).jpeg"
-              alt="Empresa Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.46.16 (3).jpeg" alt="Doce Lar">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Doce Lar Móveis</h3>
-            <p class="text-sm text-gray-500 mb-3">Móveis e Decoração</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Seu lar mais aconchegante</p>
-            </div>
-
-          </div>
-        </div>
-        <!-- Empresa 9 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.55.00.jpeg" alt="Empresa Logo"
-              class="max-h-32">
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Pioneiro</h3>
-            <p class="text-sm text-gray-500 mb-3">Restaurante e Posto</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Sabor e abastecimento no mesmo lugar</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Doce Lar Móveis</h3>
+            <p>Móveis e Decoração</p>
           </div>
         </div>
 
-        <!-- Empresa 10 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/casarocha.jpg" alt="Empresa Logo" class="max-h-32">
+        <!-- Cards ocultos -->
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.55.00.jpeg" alt="Pioneiro">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Casa Rocha</h3>
-            <p class="text-sm text-gray-500 mb-3">Tintas e Presentes</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Cores que transformam</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Pioneiro</h3>
+            <p>Restaurante e Posto</p>
           </div>
         </div>
 
-        <!-- Empresa 11 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.10.24.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/casarocha.jpg" alt="Casa Rocha">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Loja Bertoni</h3>
-            <p class="text-sm text-gray-500 mb-3">Confecção Unissex</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Estilo com tradição</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Casa Rocha</h3>
+            <p>Tintas e Presentes</p>
           </div>
         </div>
 
-        <!-- Empresa 12 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 18.02.15.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.10.24.jpeg" alt="Loja Bertoni">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Eliana Cosméticos</h3>
-            <p class="text-sm text-gray-500 mb-3">Beleza e Cuidados</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Realce sua beleza</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Loja Bertoni</h3>
+            <p>Confecção Unissex</p>
           </div>
         </div>
 
-        <!-- Empresa 13 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.39.11.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 18.02.15.jpeg" alt="Eliana Cosméticos">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">GoldStore</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda e SkateShop</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Atitude do seu jeito</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Eliana Cosméticos</h3>
+            <p>Beleza e Cuidados</p>
           </div>
         </div>
 
-        <!-- Empresa 14 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.51.58.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.39.11.jpeg" alt="GoldStore">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">LiloKids</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda Infantil e Juvenil</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Moda para os pequenos grandes estilos</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>GoldStore</h3>
+            <p>Moda e SkateShop</p>
           </div>
         </div>
 
-        <!-- Empresa 15 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-12-02 at 09.49.35.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.51.58.jpeg" alt="LiloKids">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Mercado Modelo</h3>
-            <p class="text-sm text-gray-500 mb-3">Supermercado</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Completo para sua família</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>LiloKids</h3>
+            <p>Moda Infantil e Juvenil</p>
           </div>
         </div>
 
-
-
-        <!-- Empresa 17 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.54.27.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-12-02 at 09.49.35.jpeg" alt="Mercado Modelo">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Sempre Bela</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda e Acessórios</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Charme em cada detalhe</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Mercado Modelo</h3>
+            <p>Supermercado</p>
           </div>
         </div>
 
-
-
-
-        <!-- Empresa 18 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.11.00.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 09.54.27.jpeg" alt="Sempre Bela">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Pague Menos Calçados</h3>
-            <p class="text-sm text-gray-500 mb-3">Calçados em geral</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Preço bom e qualidade</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Sempre Bela</h3>
+            <p>Moda e Acessórios</p>
           </div>
         </div>
 
-        <!-- Empresa 19 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-04-29 at 12.40.07.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.11.00.jpeg" alt="Pague Menos">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Samir Presentes</h3>
-            <p class="text-sm text-gray-500 mb-3">Presentes e Utilidades</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Para todos os momentos especiais</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Pague Menos Calçados</h3>
+            <p>Calçados em Geral</p>
           </div>
         </div>
 
-        <!-- Empresa 20 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.42.18.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-04-29 at 12.40.07.jpeg" alt="Samir Presentes">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Cheiro de Carinho</h3>
-            <p class="text-sm text-gray-500 mb-3">Cosméticos e Cuidados</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Beleza com afeto</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Samir Presentes</h3>
+            <p>Presentes e Utilidades</p>
           </div>
         </div>
 
-        <!-- Empresa 21 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.41.55.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 15.42.18.jpeg" alt="Cheiro de Carinho">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Bella Bijouteria Makeup</h3>
-            <p class="text-sm text-gray-500 mb-3">Bijuterias e Maquiagem</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Seu brilho, sua essência</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Cheiro de Carinho</h3>
+            <p>Cosméticos e Cuidados</p>
           </div>
         </div>
 
-        <!-- Empresa 22 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.48.30.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.41.55.jpeg" alt="Bella Bijouteria">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Acácia Farmarcia de Manipulação</h3>
-            <p class="text-sm text-gray-500 mb-3">Drogaria de Manipulação</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Saúde com precisão</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Bella Bijouteria Makeup</h3>
+            <p>Bijuterias e Maquiagem</p>
           </div>
         </div>
 
-        <!-- Empresa 23 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.45.27 (1).jpeg"
-              alt="Empresa Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.48.30.jpeg" alt="Acácia Farmácia">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">L.A Modas</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda Unissex</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Tendência e estilo no dia a dia</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Acácia Farmácia</h3>
+            <p>Drogaria de Manipulação</p>
           </div>
         </div>
 
-        <!-- Empresa 24 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 12.12.11.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-29 at 13.45.27 (1).jpeg" alt="L.A Modas">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Amor Perfeito</h3>
-            <p class="text-sm text-gray-500 mb-3">Floricultura</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Flores para emocionar</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>L.A Modas</h3>
+            <p>Moda Unissex</p>
           </div>
         </div>
 
-        <!-- Empresa 25 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.07.15.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 12.12.11.jpeg" alt="Amor Perfeito">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">O Boticário</h3>
-            <p class="text-sm text-gray-500 mb-3">Perfumaria e Cosméticos</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Encantos para todos os sentidos</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Amor Perfeito</h3>
+            <p>Floricultura</p>
           </div>
         </div>
 
-
-
-        <!-- Empresa 27 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.43.01.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-11-28 at 17.07.15.jpeg" alt="O Boticário">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Juli Presentes</h3>
-            <p class="text-sm text-gray-500 mb-3">Presentes e Utilidade</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Para surpreender sempre</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>O Boticário</h3>
+            <p>Perfumaria e Cosméticos</p>
           </div>
         </div>
 
-        <!-- Empresa 28 -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-04-10 at 10.50.40.jpeg" alt="Empresa Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2024-05-09 at 10.43.01.jpeg" alt="Juli Presentes">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Lady P Modas</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda Feminina</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Elegância e atitude</p>
-            </div>
-
+          <div class="empresa-info">
+            <h3>Juli Presentes</h3>
+            <p>Presentes e Utilidades</p>
           </div>
         </div>
 
-        <!-- Empresa 29 - Preço Popular Calçados -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/popular calçados.jpg" alt="Preço Popular Calçados Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-04-10 at 10.50.40.jpeg" alt="Lady P Modas">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Preço Popular Calçados</h3>
-            <p class="text-sm text-gray-500 mb-3">Calçados</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Qualidade para toda a família</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Lady P Modas</h3>
+            <p>Moda Feminina</p>
           </div>
         </div>
 
-        <!-- Empresa 30 - Farmacia Frei Galvão -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/frei galvão.jpg" alt="Farmacia Frei Galvão Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/popular calçados.jpg" alt="Preço Popular">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Farmacia Frei Galvão</h3>
-            <p class="text-sm text-gray-500 mb-3">Farmácia</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Saúde e bem-estar para você</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Preço Popular Calçados</h3>
+            <p>Calçados</p>
           </div>
         </div>
 
-        <!-- Empresa 31 - Mafer Modas -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/mafer modas.jpg" alt="Mafer Modas Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/frei galvão.jpg" alt="Farmácia Frei Galvão">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Mafer Modas</h3>
-            <p class="text-sm text-gray-500 mb-3">Moda Feminina</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Para mulheres de estilo</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Farmácia Frei Galvão</h3>
+            <p>Farmácia</p>
           </div>
         </div>
 
-        <!-- Empresa 32 - Loja Fabiane -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/lojas fabiane.jpg" alt="Loja Fabiane Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/mafer modas.jpg" alt="Mafer Modas">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Loja Fabiane</h3>
-            <p class="text-sm text-gray-500 mb-3">Móveis</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Móveis para todos os gostos</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Mafer Modas</h3>
+            <p>Moda Feminina</p>
           </div>
         </div>
 
-        <!-- Empresa 33 - Zanon Tecidos -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/zanon.jpg" alt="Zanon Tecidos Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/lojas fabiane.jpg" alt="Loja Fabiane">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Zanon Tecidos</h3>
-            <p class="text-sm text-gray-500 mb-3">Tecidos e Artigos para Costura</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Qualidade em cada metro</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Loja Fabiane</h3>
+            <p>Móveis</p>
           </div>
         </div>
 
-        <!-- Empresa 34 - Farmacia Nova Bom Jesus -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/farmacianovabomjesus.jpeg" alt="Farmacia Nova Bom Jesus Logo"
-              class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/zanon.jpg" alt="Zanon Tecidos">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Farmácia Nova Bom Jesus</h3>
-            <p class="text-sm text-gray-500 mb-3">Farmácia</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Sua saúde em primeiro lugar</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Zanon Tecidos</h3>
+            <p>Tecidos e Artigos de Costura</p>
           </div>
         </div>
 
-        <!-- Empresa 35 - Passovip -->
-        <div class="card-empresa bg-white rounded-xl shadow-md overflow-hidden empresa-hidden">
-          <div class="logo-placeholder h-40 bg-gray-50 border-b border-gray-100">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/passovip.jpeg" alt="Passovip Logo" class="max-h-32">
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/farmacianovabomjesus.jpeg" alt="Farmácia Nova Bom Jesus">
           </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-primary-dark mb-1">Passovip</h3>
-            <p class="text-sm text-gray-500 mb-3">Calçados</p>
-            <div class="flex items-center">
-              <i class="fas fa-tag text-primary text-sm mr-2"></i>
-              <p class="text-sm text-gray-600">Conforto e estilo a cada passo</p>
-            </div>
+          <div class="empresa-info">
+            <h3>Farmácia Nova Bom Jesus</h3>
+            <p>Farmácia</p>
+          </div>
+        </div>
+
+        <div class="empresa-card animate-on-scroll hidden">
+          <div class="empresa-logo">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/passovip.jpeg" alt="Passovip">
+          </div>
+          <div class="empresa-info">
+            <h3>Passovip</h3>
+            <p>Calçados</p>
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <button id="ver-mais-btn"
-          class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-flex items-center">
-          <span>Ver todas as empresas</span>
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
+      <div class="ver-mais-container">
+        <button class="btn btn-outline" id="ver-mais-btn">
+          <i class="fas fa-chevron-down"></i>
+          Ver todas as lojas
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Ganhadores -->
-  <section id="ganhadores" class="py-20 bg-secondary-light relative overflow-hidden">
-    <div class="flower-decoration top-10 left-10"></div>
-    <div class="flower-decoration bottom-10 right-10"></div>
-
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 font-display">Ganhadores</h2>
-        <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto">Parabéns aos ganhadores dos nossos sorteios!</p>
+  <!-- Ganhadores de Campanhas Anteriores -->
+  <section class="section section-alt" id="ganhadores">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">Ganhadores de Campanhas Anteriores</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Confira quem já ganhou prêmios nas nossas campanhas!</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Ganhador 1 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
+      <div class="ganhadores-grid">
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
           </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Sandra Oliveira</h3>
-            <p class="text-gray-500">Vale-Compras R$300,00</p>
-            <p class="text-sm font-medium">Mercado Modelo</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 25/04/2025</p>
-          </div>
-        </div>
-
-        <!-- Ganhador 2 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Marta Prado</h3>
-            <p class="text-gray-500">Vale-Compras R$50,00</p>
-            <p class="text-sm font-medium">Lilo Kids</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 25/04/2025</p>
+          <div class="ganhador-info">
+            <h3>Sandra Oliveira</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 300,00</p>
+            <p class="ganhador-loja">Mercado Modelo</p>
+            <p class="ganhador-data">Sorteio: 25/04/2025</p>
           </div>
         </div>
 
-
-        <!-- ganhadora 3 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
           </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Larissa Vítoria</h3>
-            <p class="text-gray-500">Vale-Compras R$300,00</p>
-            <p class="text-sm font-medium">Mercado Modelo</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 25/04/2025</p>
+          <div class="ganhador-info">
+            <h3>Marta Prado</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
+            <p class="ganhador-loja">LiloKids</p>
+            <p class="ganhador-data">Sorteio: 25/04/2025</p>
           </div>
         </div>
 
-        <!-- ganhadora 4 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
           </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Nazeli Alves </h3>
-            <p class="text-gray-500">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium">Sempre Bela</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <!-- ganhadora 5 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Maria Jose</h3>
-            <p class="text-gray-500">Vale-Compras R$50,00</p>
-            <p class="text-sm font-medium">Lilo Kids</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 09/05/2025</p>
+          <div class="ganhador-info">
+            <h3>Zilda</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
+            <p class="ganhador-loja">Eliana Cosméticos</p>
+            <p class="ganhador-data">Sorteio: 02/05/2025</p>
           </div>
         </div>
 
-        <!-- Ganhador 6 -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="bg-primary-light rounded-full p-4 mr-4">
-            <i class="fas fa-gift text-primary text-2xl"></i>
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
           </div>
-          <div>
-            <h3 class="font-bold text-lg text-primary-dark">Marinês Chominski</h3>
-            <p class="text-gray-500">Vale-Compras R$100,00</p>
-            <p class="text-sm font-medium">Lá Pelle</p>
-            <p class="text-xs text-gray-400 mt-1">Sorteio: 09/05/2025</p>
+          <div class="ganhador-info">
+            <h3>Larissa Vitória</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 300,00</p>
+            <p class="ganhador-loja">Mercado Modelo</p>
+            <p class="ganhador-data">Sorteio: 02/05/2025</p>
+          </div>
+        </div>
+
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="ganhador-info">
+            <h3>Maria José</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
+            <p class="ganhador-loja">LiloKids</p>
+            <p class="ganhador-data">Sorteio: 09/05/2025</p>
+          </div>
+        </div>
+
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="ganhador-info">
+            <h3>Nazeli Alves</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
+            <p class="ganhador-loja">Sempre Bela</p>
+            <p class="ganhador-data">Sorteio: 09/05/2025</p>
+          </div>
+        </div>
+
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="ganhador-info">
+            <h3>Marinês Chominski</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
+            <p class="ganhador-loja">La Pelle</p>
+            <p class="ganhador-data">Sorteio: 09/05/2025</p>
+          </div>
+        </div>
+
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="ganhador-info">
+            <h3>Lucia Xavier</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
+            <p class="ganhador-loja">Mafer Modas</p>
+            <p class="ganhador-data">Sorteio: 16/05/2025</p>
+          </div>
+        </div>
+
+        <div class="ganhador-card animate-on-scroll">
+          <div class="ganhador-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <div class="ganhador-info">
+            <h3>Rosilei Freitas</h3>
+            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
+            <p class="ganhador-loja">Juli Presentes</p>
+            <p class="ganhador-data">Sorteio: 16/05/2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regras -->
+  <section class="section" id="regras">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">Regulamento da Promoção</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Confira todas as regras para participar do Natal Premiado.</p>
+      </div>
+
+      <div class="regras-container">
+        <div class="regras-card animate-on-scroll">
+          <div class="regras-list">
+            <div class="regra-item">
+              <div class="regra-number">1</div>
+              <div class="regra-content">
+                <h4>Período da Promoção</h4>
+                <p>A promoção é válida para compras realizadas durante todo o mês de dezembro de 2025.</p>
+              </div>
+            </div>
+
+            <div class="regra-item">
+              <div class="regra-number">2</div>
+              <div class="regra-content">
+                <h4>Participação</h4>
+                <p>Para participar, basta fazer compras em qualquer loja conveniada do Natal Premiado ACISC.</p>
+              </div>
+            </div>
+
+            <div class="regra-item">
+              <div class="regra-number">3</div>
+              <div class="regra-content">
+                <h4>Cupons para Sorteio</h4>
+                <p>Cada compra realizada dá direito a cupons para concorrer nos sorteios semanais.</p>
+              </div>
+            </div>
+
+            <div class="regra-item">
+              <div class="regra-number">4</div>
+              <div class="regra-content">
+                <h4>Sorteios</h4>
+                <p>Os sorteios acontecem toda sexta-feira, às 18h, na sede da ACISC.</p>
+              </div>
+            </div>
+
+            <div class="regra-item">
+              <div class="regra-number">5</div>
+              <div class="regra-content">
+                <h4>Divulgação dos Resultados</h4>
+                <p>Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e redes sociais da ACISC.</p>
+              </div>
+            </div>
+
+            <div class="regra-item">
+              <div class="regra-number">6</div>
+              <div class="regra-content">
+                <h4>Observações</h4>
+                <p>Os cupons não são cumulativos com outras promoções. Consulte cada loja para mais detalhes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="regras-footer">
+            <div class="regras-footer-text">
+              <h4>Ficou com dúvidas?</h4>
+              <p>Entre em contato pelo telefone (43) 99950-0181</p>
+            </div>
+            <a href="#contato" class="btn btn-primary">Fale Conosco</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Regras da Promoção -->
-  <section id="regras" class="py-20 bg-primary-light relative overflow-hidden">
-    <div class="flower-decoration top-20 left-10 opacity-25"></div>
-    <div class="flower-decoration bottom-20 right-10 opacity-25"></div>
-
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 font-display">Regras da Promoção</h2>
-        <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto">Confira o regulamento completo da nossa campanha.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto relative z-10" data-aos="fade-up"
-        data-aos-delay="200">
-        <ul class="numbered-list">
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Período da Promoção</p>
-            <p class="text-gray-600">A promoção é válida para compras realizadas entre 14/04/2025 a 16/05/2025.</p>
-          </li>
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Participação</p>
-            <p class="text-gray-600">Para participar, basta fazer compras em qualquer loja conveniada do Clube de
-              Descontos.</p>
-          </li>
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Cupons de Desconto</p>
-            <p class="text-gray-600">Cada compra realizada dá direito a um cupom de desconto para uso em outra loja
-              participante.</p>
-          </li>
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Sorteios</p>
-            <p class="text-gray-600">Os sorteios acontecem toda semana, às 18h, na sede da ACISC.</p>
-          </li>
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Divulgação dos Resultados</p>
-            <p class="text-gray-600">Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e
-              redes sociais da ACISC.</p>
-          </li>
-          <li class="pl-8">
-            <p class="text-lg font-semibold text-primary-dark mb-2">Restrições</p>
-            <p class="text-gray-600">Os cupons de desconto não são cumulativos com outras promoções.</p>
-          </li>
-        </ul>
-
-        <div class="mt-12 p-6 bg-primary-light rounded-xl flex flex-col md:flex-row items-center justify-between">
-          <div class="mb-4 md:mb-0 md:mr-6">
-            <h3 class="text-xl font-bold text-primary-dark mb-2">Dúvidas</h3>
-            <p class="text-gray-600">Em caso de dúvidas, entre em contato com a ACISC pelo telefone (43) 99950-0181.</p>
-          </div>
-          <a href="#contato"
-            class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg transition duration-300 inline-block text-center whitespace-nowrap">
-            Entre em Contato
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6 font-display" data-aos="fade-up">Não perca esta oportunidade!</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90" data-aos="fade-up" data-aos-delay="100">Aproveite as
-        promoções e concorra a prêmios incríveis para presentear sua mãe neste dia especial.</p>
-      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-        <a href="#empresas"
-          class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center font-medium">
-          Ver Empresas Participantes
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Não perca essa oportunidade!</h2>
+      <p class="cta-text">
+        Aproveite as promoções de Natal nas lojas participantes e concorra a prêmios incríveis.
+      </p>
+      <div class="cta-buttons">
+        <a href="#empresas" class="btn btn-white btn-lg">
+          <i class="fas fa-store"></i>
+          Ver Lojas Participantes
         </a>
-        <a href="#ganhadores"
-          class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center font-medium">
-          Veja os Ganhadores
-        </a>
-        <a href="#regras"
-          class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md inline-block text-center font-medium">
+        <a href="#regras" class="btn btn-secondary btn-lg">
+          <i class="fas fa-book"></i>
           Consultar Regras
         </a>
       </div>
@@ -1479,242 +1787,191 @@
   </section>
 
   <!-- Footer -->
-  <footer id="contato" class="bg-white pt-16 pb-8">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-        <div data-aos="fade-up">
-          <div class="mb-6">
-            <img src="acisic logo.jpg" alt="ACISC Logo" class="h-16">
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="acisic logo.jpg" alt="ACISC">
+          <p>Associação Comercial e Empresarial de Siqueira Campos — fortalecendo o comércio local desde sempre.</p>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Rua Marechal Deodoro, 1711 - Centro</span>
           </div>
-          <p class="text-gray-600 mb-4">Associação Comercial e Empresarial de Siqueira Campos</p>
-          <div class="space-y-2">
-            <div class="flex items-center">
-              <i class="fas fa-map-marker-alt text-primary mr-3 w-5 text-center"></i>
-              <p class="text-gray-600">Rua Marechal Deodoro, 1711 - Centro</p>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-phone text-primary mr-3 w-5 text-center"></i>
-              <p class="text-gray-600">(43) 99950-0181</p>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-envelope text-primary mr-3 w-5 text-center"></i>
-              <p class="text-gray-600">acisc_secretaria@hotmail.com</p>
-            </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>(43) 99950-0181</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>acisc_secretaria@hotmail.com</span>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-bold text-primary-dark mb-6">Redes Sociais</h3>
-          <div class="flex space-x-4 mb-6">
-            <a href="https://www.facebook.com/share/15w7S1JEto/" target="_blank"
-              class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+        <div>
+          <h4>Redes Sociais</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/share/15w7S1JEto/" target="_blank" class="facebook" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/acisc.siqueiracampos?igsh=d21iaXpiYTJjY3Vn" target="_blank"
-              class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+            <a href="https://www.instagram.com/acisc.siqueiracampos?igsh=d21iaXpiYTJjY3Vn" target="_blank" class="instagram" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://wa.me/5543999500181" target="_blank"
-              class="bg-green-500 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center text-white transition duration-300">
+            <a href="https://wa.me/5543999500181" target="_blank" class="whatsapp" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
-          <p class="text-gray-600">Siga-nos e fique por dentro de todas as novidades!</p>
-          <div class="mt-6 p-4 bg-gray-50 rounded-lg">
-            <p class="text-sm text-gray-500">
-              <i class="fas fa-clock text-primary mr-2"></i>
-              Horário de atendimento:
-            </p>
-            <p class="text-sm text-gray-500 ml-6">Segunda a Sexta: 9h às 18h</p>
-            <p class="text-sm text-gray-500 ml-6">Sábados (HomeOffice): 9h às 12h</p>
+          <div class="footer-hours">
+            <p><strong>Horário de atendimento:</strong></p>
+            <p>Seg a Sex: 9h às 18h</p>
+            <p>Sábados: 9h às 12h (Home Office)</p>
           </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-bold text-primary-dark mb-6">Contato</h3>
-          <p class="text-gray-600 mb-6">Tem dúvidas sobre a promoção? Entre em contato conosco!</p>
-          <form class="space-y-4">
-            <div>
-              <input type="text" placeholder="Nome"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition">
-            </div>
-            <div>
-              <input type="email" placeholder="Email"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition">
-            </div>
-            <div>
-              <textarea placeholder="Mensagem"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary-light focus:ring-opacity-50 transition"
-                rows="3"></textarea>
-            </div>
-            <button type="submit"
-              class="bg-primary hover:bg-primary-dark text-white w-full py-2 rounded-lg transition duration-300 transform hover:-translate-y-1 shadow-md">
-              Enviar Mensagem
-            </button>
+        <div>
+          <h4>Envie sua mensagem</h4>
+          <form class="footer-form" onsubmit="return false;">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" rows="3" required></textarea>
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
           </form>
         </div>
       </div>
 
-      <div class="border-t border-gray-200 pt-8 mt-8 text-center">
-        <p class="text-gray-500 text-sm">
-          &copy; 2025 ACISC - Associação Comercial e Empresarial de Siqueira Campos | Todos os direitos reservados
-        </p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ACISC — Associação Comercial e Empresarial de Siqueira Campos. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to top button -->
-  <button id="scrollToTop"
-    class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 opacity-0 invisible transition-all duration-300">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"></path>
-    </svg>
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Inicialização AOS (Animate on Scroll)
-    document.addEventListener('DOMContentLoaded', function () {
-      AOS.init({
-        duration: 800,
-        once: true,
-        mirror: false
-      });
-
-      // Navbar Toggle
-      const menuToggle = document.getElementById('menu-toggle');
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById('mobile-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
-
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', function () {
-          mobileMenu.classList.toggle('hidden');
+      
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          const icon = mobileToggle.querySelector('i');
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
         });
 
-        // Fechar menu ao clicar em um link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', function () {
-            mobileMenu.classList.add('hidden');
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileToggle.querySelector('i').classList.add('fa-bars');
+            mobileToggle.querySelector('i').classList.remove('fa-times');
           });
         });
       }
 
-      // Scroll suave para links de âncora
+      // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           e.preventDefault();
-
           const targetId = this.getAttribute('href');
           if (targetId === '#') return;
-
+          
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            
             window.scrollTo({
-              top: targetElement.offsetTop - 70,
+              top: targetPosition,
               behavior: 'smooth'
             });
           }
         });
       });
 
-      // Countdown Timer
-      const countdownDate = new Date("May 17, 2025 16:00:00").getTime();
+      // Countdown Timer - Set to December 20, 2025 (example date)
+      const countdownDate = new Date("December 20, 2025 18:00:00").getTime();
 
-      const countdownTimer = setInterval(function () {
+      function updateCountdown() {
         const now = new Date().getTime();
         const distance = countdownDate - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (distance > 0) {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-        document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-        document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-        document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-        if (distance < 0) {
-          clearInterval(countdownTimer);
-          document.getElementById("days").innerHTML = "00";
-          document.getElementById("hours").innerHTML = "00";
-          document.getElementById("minutes").innerHTML = "00";
-          document.getElementById("seconds").innerHTML = "00";
+          document.getElementById('days').textContent = days.toString().padStart(2, '0');
+          document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+          document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+          document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
         }
-      }, 1000);
+      }
 
-      // Botão Ver mais empresas
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // Ver mais empresas
       const verMaisBtn = document.getElementById('ver-mais-btn');
-      const empresasOcultas = document.querySelectorAll('.empresa-hidden');
+      const hiddenCards = document.querySelectorAll('.empresa-card.hidden');
 
-      if (verMaisBtn && empresasOcultas.length > 0) {
-        verMaisBtn.addEventListener('click', function () {
-          let delay = 0;
-
-          empresasOcultas.forEach(empresa => {
+      if (verMaisBtn && hiddenCards.length > 0) {
+        verMaisBtn.addEventListener('click', function() {
+          hiddenCards.forEach((card, index) => {
             setTimeout(() => {
-              empresa.classList.remove('empresa-hidden');
-              empresa.classList.add('fade-in-up');
-            }, delay);
-            delay += 100;
+              card.classList.remove('hidden');
+              card.classList.add('visible');
+            }, index * 50);
           });
 
-          // Atualiza o botão
-          this.innerHTML = '<span>Todas as empresas exibidas</span>';
+          this.innerHTML = '<i class="fas fa-check"></i> Todas as lojas exibidas';
           this.disabled = true;
-          this.classList.add('opacity-75', 'cursor-not-allowed');
-          this.classList.remove('hover:bg-primary-dark', 'hover:-translate-y-1');
+          this.style.opacity = '0.6';
+          this.style.cursor = 'default';
         });
       }
 
-      // Efeito de navbar ao scroll
-      const navbar = document.getElementById('navbar');
-      const scrollToTopBtn = document.getElementById('scrollToTop');
-
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-          navbar.classList.add('shadow-md');
+      // Scroll to top button
+      const scrollTopBtn = document.getElementById('scroll-top');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('visible');
         } else {
-          navbar.classList.remove('shadow-md');
-        }
-
-        // Mostrar/ocultar botão de scroll to top
-        if (window.scrollY > 300) {
-          scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-          scrollToTopBtn.classList.add('opacity-100', 'visible');
-        } else {
-          scrollToTopBtn.classList.add('opacity-0', 'invisible');
-          scrollToTopBtn.classList.remove('opacity-100', 'visible');
+          scrollTopBtn.classList.remove('visible');
         }
       });
 
-      // Scroll to top
-      scrollToTopBtn.addEventListener('click', function () {
+      scrollTopBtn.addEventListener('click', function() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
       });
 
-      // Criar flocos de neve
-      function createSnowflakes() {
-        const snowflakeSymbols = ['❄', '❅', '❆', '✨', '⭐'];
-        const numberOfSnowflakes = 15;
+      // Animate on scroll
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
-        for (let i = 0; i < numberOfSnowflakes; i++) {
-          const snowflake = document.createElement('div');
-          snowflake.className = 'snowflake';
-          snowflake.innerHTML = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
-          snowflake.style.left = Math.random() * 100 + '%';
-          snowflake.style.animationDuration = (Math.random() * 10 + 10) + 's';
-          snowflake.style.animationDelay = Math.random() * 5 + 's';
-          snowflake.style.fontSize = (Math.random() * 1 + 1) + 'rem';
-          document.body.appendChild(snowflake);
-        }
-      }
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
 
-      createSnowflakes();
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
 </body>
