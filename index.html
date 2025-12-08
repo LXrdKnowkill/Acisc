@@ -298,13 +298,28 @@
       color: var(--green-700);
     }
 
+    /* ==================== HERO BANNER ==================== */
+    .hero-banner {
+      width: 100%;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .hero-banner img {
+      max-width: 1000px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
     /* ==================== HERO ==================== */
     .hero {
-      padding: 8rem 0 5rem;
+      padding: 5rem 0 5rem;
       background: linear-gradient(135deg, var(--green-50) 0%, var(--gold-50) 50%, var(--green-50) 100%);
       position: relative;
       overflow: hidden;
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       align-items: center;
     }
@@ -406,23 +421,31 @@
 
     .hero-card {
       background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow-xl);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(22, 163, 74, 0.1);
       overflow: hidden;
-      border: 1px solid var(--gray-200);
+      border: 2px solid var(--green-200);
+      transition: all 0.4s ease;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(22, 163, 74, 0.2);
     }
 
     .hero-card-header {
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
-      background: linear-gradient(135deg, var(--green-50), var(--white));
+      background: linear-gradient(135deg, var(--white) 0%, var(--green-50) 100%);
+      border-bottom: 1px solid var(--green-100);
     }
 
     .hero-card-header img {
       max-width: 100%;
       height: auto;
-      max-height: 180px;
+      max-height: 160px;
       object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
     }
 
     .countdown-section {
@@ -452,40 +475,61 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
-      height: 60px;
-      background: var(--green-700);
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(135deg, var(--green-600) 0%, var(--green-700) 100%);
       color: var(--white);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      border-radius: 10px;
+      border-radius: 12px;
       font-family: 'DM Sans', sans-serif;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .countdown-value:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
     }
 
     .countdown-unit {
       font-size: 0.7rem;
-      color: var(--gray-500);
+      color: var(--gray-600);
       margin-top: 0.5rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .countdown-separator {
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--green-700);
+      color: var(--green-600);
       align-self: flex-start;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
     }
 
     .hero-card-footer {
-      padding: 1.25rem 2rem;
-      background: var(--green-800);
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, var(--green-700) 0%, var(--green-800) 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .hero-card-footer-text {
@@ -494,12 +538,13 @@
 
     .hero-card-footer-text strong {
       display: block;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.1rem;
     }
 
     .hero-card-footer-text span {
       font-size: 0.85rem;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     /* ==================== SECTIONS ==================== */
@@ -1101,7 +1146,6 @@
         <ul class="navbar-nav">
           <li><a href="#como-funciona">Como Funciona</a></li>
           <li><a href="#empresas">Lojas Participantes</a></li>
-          <li><a href="#ganhadores">Ganhadores</a></li>
           <li><a href="#regras">Regulamento</a></li>
           <li><a href="#contato" class="btn btn-primary">Fale Conosco</a></li>
         </ul>
@@ -1114,12 +1158,16 @@
       <div class="mobile-menu" id="mobile-menu">
         <a href="#como-funciona">Como Funciona</a>
         <a href="#empresas">Lojas Participantes</a>
-        <a href="#ganhadores">Ganhadores</a>
         <a href="#regras">Regulamento</a>
         <a href="#contato">Fale Conosco</a>
       </div>
     </div>
   </nav>
+
+  <!-- Banner Principal -->
+  <section class="hero-banner">
+    <img src="3917.jpg" alt="Bingo de Natal ACISC 2025">
+  </section>
 
   <!-- Hero -->
   <section class="hero" id="hero">
@@ -1178,8 +1226,8 @@
           </div>
           <div class="hero-card-footer">
             <div class="hero-card-footer-text">
-              <strong>Dezembro 2025</strong>
-              <span>Sorteios toda sexta-feira</span>
+              <strong>Bingo de Natal</strong>
+              <span>Dia 27/12 às 20h - Praça do Santuário</span>
             </div>
             <a href="#regras" class="btn btn-secondary">Ver Regras</a>
           </div>
@@ -1194,7 +1242,8 @@
       <div class="section-header animate-on-scroll">
         <h2 class="section-title">Como Funciona</h2>
         <div class="section-divider"></div>
-        <p class="section-subtitle">Participar é simples! Veja como garantir seus cupons para os sorteios.</p>
+        <p class="section-subtitle">Participar é simples! Veja como garantir seus cupons para trocar por uma cartela de
+          bingo.</p>
       </div>
 
       <div class="steps-grid">
@@ -1212,17 +1261,8 @@
           <div class="step-icon">
             <i class="fas fa-ticket-alt"></i>
           </div>
-          <h3>Receba seus Cupons</h3>
-          <p>A cada compra você recebe cupons para concorrer nos sorteios semanais.</p>
-        </div>
-
-        <div class="step-card animate-on-scroll">
-          <div class="step-number">3</div>
-          <div class="step-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <h3>Concorra a Prêmios</h3>
-          <p>Sorteios toda sexta-feira às 18h na sede da ACISC. Boa sorte!</p>
+          <h3>Troque seus Cupons</h3>
+          <p>A cada 20 cupons você troca por uma cartela de bingo na ACISC.</p>
         </div>
       </div>
     </div>
@@ -1237,484 +1277,421 @@
         <p class="section-subtitle">Confira todas as lojas onde você pode participar do Natal Premiado.</p>
       </div>
 
-            <div class="empresas-grid" id="empresas-grid">
+      <div class="empresas-grid" id="empresas-grid">
         <!-- Lojas Visíveis -->
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.37.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.37.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.38 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.39 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <!-- Cards ocultos -->
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.40 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.41 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.42 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.43 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.44 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.45 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.46 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.47 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (2).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (2).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (3).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (3).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (4).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-03 at 14.29.48 (4).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <!-- Imagens de 05/12/2025 -->
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.18.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.18.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.19.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.19.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.19 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.19 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.20.jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.20.jpeg"
+              alt="Loja Participante">
           </div>
         </div>
 
         <div class="empresa-card animate-on-scroll hidden">
           <div class="empresa-logo">
-            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.20 (1).jpeg" alt="Loja Participante">
+            <img src="CLUB DE DESCONTO DIA DAS MÃES 2025/WhatsApp Image 2025-12-05 at 16.19.20 (1).jpeg"
+              alt="Loja Participante">
           </div>
         </div>
       </div>
-<div class="ver-mais-container">
+      <div class="ver-mais-container">
         <button class="btn btn-outline" id="ver-mais-btn">
           <i class="fas fa-chevron-down"></i>
           Ver todas as lojas
         </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ganhadores de Campanhas Anteriores -->
-  <section class="section section-alt" id="ganhadores">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Ganhadores de Campanhas Anteriores</h2>
-        <div class="section-divider"></div>
-        <p class="section-subtitle">Confira quem já ganhou prêmios nas nossas campanhas!</p>
-      </div>
-
-      <div class="ganhadores-grid">
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Sandra Oliveira</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 300,00</p>
-            <p class="ganhador-loja">Mercado Modelo</p>
-            <p class="ganhador-data">Sorteio: 25/04/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Marta Prado</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
-            <p class="ganhador-loja">LiloKids</p>
-            <p class="ganhador-data">Sorteio: 25/04/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Zilda</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
-            <p class="ganhador-loja">Eliana Cosméticos</p>
-            <p class="ganhador-data">Sorteio: 02/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Larissa Vitória</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 300,00</p>
-            <p class="ganhador-loja">Mercado Modelo</p>
-            <p class="ganhador-data">Sorteio: 02/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Maria José</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 50,00</p>
-            <p class="ganhador-loja">LiloKids</p>
-            <p class="ganhador-data">Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Nazeli Alves</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
-            <p class="ganhador-loja">Sempre Bela</p>
-            <p class="ganhador-data">Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Marinês Chominski</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
-            <p class="ganhador-loja">La Pelle</p>
-            <p class="ganhador-data">Sorteio: 09/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Lucia Xavier</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
-            <p class="ganhador-loja">Mafer Modas</p>
-            <p class="ganhador-data">Sorteio: 16/05/2025</p>
-          </div>
-        </div>
-
-        <div class="ganhador-card animate-on-scroll">
-          <div class="ganhador-icon">
-            <i class="fas fa-gift"></i>
-          </div>
-          <div class="ganhador-info">
-            <h3>Rosilei Freitas</h3>
-            <p class="ganhador-premio">Vale-Compras R$ 100,00</p>
-            <p class="ganhador-loja">Juli Presentes</p>
-            <p class="ganhador-data">Sorteio: 16/05/2025</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1735,36 +1712,28 @@
               <div class="regra-number">1</div>
               <div class="regra-content">
                 <h4>Período da Promoção</h4>
-                <p>A promoção é válida para compras realizadas durante todo o mês de dezembro de 2025.</p>
+                <p>A promoção é válida para compras realizadas até dia 26/12.</p>
               </div>
             </div>
 
             <div class="regra-item">
               <div class="regra-number">2</div>
               <div class="regra-content">
-                <h4>Participação</h4>
-                <p>Para participar, basta fazer compras em qualquer loja conveniada do Natal Premiado ACISC.</p>
+                <h4>Cupons</h4>
+                <p>A cada 20 cupons troque por uma cartela de bingo.</p>
               </div>
             </div>
 
             <div class="regra-item">
               <div class="regra-number">3</div>
               <div class="regra-content">
-                <h4>Cupons para Sorteio</h4>
-                <p>Cada compra realizada dá direito a cupons para concorrer nos sorteios semanais.</p>
+                <h4>Sorteio</h4>
+                <p>Bingo dia 27/12 na praça do santuário após show com a banda Europa.</p>
               </div>
             </div>
 
             <div class="regra-item">
               <div class="regra-number">4</div>
-              <div class="regra-content">
-                <h4>Sorteios</h4>
-                <p>Os sorteios acontecem toda sexta-feira, às 18h, na sede da ACISC.</p>
-              </div>
-            </div>
-
-            <div class="regra-item">
-              <div class="regra-number">5</div>
               <div class="regra-content">
                 <h4>Divulgação dos Resultados</h4>
                 <p>Os ganhadores serão contactados por telefone e terão seu nome divulgado no site e redes sociais da
@@ -1773,7 +1742,7 @@
             </div>
 
             <div class="regra-item">
-              <div class="regra-number">6</div>
+              <div class="regra-number">5</div>
               <div class="regra-content">
                 <h4>Observações</h4>
                 <p>Os cupons não são cumulativos com outras promoções. Consulte cada loja para mais detalhes.</p>
@@ -1921,8 +1890,8 @@
         });
       });
 
-      // Countdown Timer - Set to December 20, 2025 (example date)
-      const countdownDate = new Date("December 20, 2025 18:00:00").getTime();
+      // Countdown Timer - Bingo dia 27/12/2025 às 20:00
+      const countdownDate = new Date("December 27, 2025 20:00:00").getTime();
 
       function updateCountdown() {
         const now = new Date().getTime();
